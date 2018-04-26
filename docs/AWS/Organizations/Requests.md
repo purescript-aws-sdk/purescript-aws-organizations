@@ -11,7 +11,7 @@ acceptHandshake :: forall eff. Service -> AcceptHandshakeRequest -> Aff (excepti
 #### `attachPolicy`
 
 ``` purescript
-attachPolicy :: forall eff. Service -> AttachPolicyRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+attachPolicy :: forall eff. Service -> AttachPolicyRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Attaches a policy to a root, an organizational unit, or an individual account. How the policy affects accounts depends on the type of policy:</p> <ul> <li> <p> <b>Service control policy (SCP)</b> - An SCP specifies what permissions can be delegated to users in affected member accounts. The scope of influence for a policy depends on what you attach the policy to:</p> <ul> <li> <p>If you attach an SCP to a root, it affects all accounts in the organization.</p> </li> <li> <p>If you attach an SCP to an OU, it affects all accounts in that OU and in any child OUs.</p> </li> <li> <p>If you attach the policy directly to an account, then it affects only that account.</p> </li> </ul> <p>SCPs essentially are permission "filters". When you attach one SCP to a higher level root or OU, and you also attach a different SCP to a child OU or to an account, the child policy can further restrict only the permissions that pass through the parent filter and are available to the child. An SCP that is attached to a child cannot grant a permission that is not already granted by the parent. For example, imagine that the parent SCP allows permissions A, B, C, D, and E. The child SCP allows C, D, E, F, and G. The result is that the accounts affected by the child SCP are allowed to use only C, D, and E. They cannot use A or B because they were filtered out by the child OU. They also cannot use F and G because they were filtered out by the parent OU. They cannot be granted back by the child SCP; child SCPs can only filter the permissions they receive from the parent SCP.</p> <p>AWS Organizations attaches a default SCP named <code>"FullAWSAccess</code> to every root, OU, and account. This default SCP allows all services and actions, enabling any new child OU or account to inherit the permissions of the parent root or OU. If you detach the default policy, you must replace it with a policy that specifies the permissions that you want to allow in that OU or account.</p> <p>For more information about how Organizations policies permissions work, see <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scp.html">Using Service Control Policies</a> in the <i>AWS Organizations User Guide</i>.</p> </li> </ul> <p>This operation can be called only from the organization's master account.</p>
@@ -67,7 +67,7 @@ declineHandshake :: forall eff. Service -> DeclineHandshakeRequest -> Aff (excep
 #### `deleteOrganization`
 
 ``` purescript
-deleteOrganization :: forall eff. Service -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteOrganization :: forall eff. Service -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes the organization. You can delete an organization only by using credentials from the master account. The organization must be empty of member accounts, OUs, and policies.</p>
@@ -75,7 +75,7 @@ deleteOrganization :: forall eff. Service -> Aff (exception :: EXCEPTION | eff) 
 #### `deleteOrganizationalUnit`
 
 ``` purescript
-deleteOrganizationalUnit :: forall eff. Service -> DeleteOrganizationalUnitRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteOrganizationalUnit :: forall eff. Service -> DeleteOrganizationalUnitRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes an organizational unit from a root or another OU. You must first remove all accounts and child OUs from the OU that you want to delete.</p> <p>This operation can be called only from the organization's master account.</p>
@@ -83,7 +83,7 @@ deleteOrganizationalUnit :: forall eff. Service -> DeleteOrganizationalUnitReque
 #### `deletePolicy`
 
 ``` purescript
-deletePolicy :: forall eff. Service -> DeletePolicyRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+deletePolicy :: forall eff. Service -> DeletePolicyRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes the specified policy from your organization. Before you perform this operation, you must first detach the policy from all OUs, roots, and accounts.</p> <p>This operation can be called only from the organization's master account.</p>
@@ -139,7 +139,7 @@ describePolicy :: forall eff. Service -> DescribePolicyRequest -> Aff (exception
 #### `detachPolicy`
 
 ``` purescript
-detachPolicy :: forall eff. Service -> DetachPolicyRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+detachPolicy :: forall eff. Service -> DetachPolicyRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Detaches a policy from a target root, organizational unit, or account. If the policy being detached is a service control policy (SCP), the changes to permissions for IAM users and roles in affected accounts are immediate.</p> <p> <b>Note:</b> Every root, OU, and account must have at least one SCP attached. If you want to replace the default <code>FullAWSAccess</code> policy with one that limits the permissions that can be delegated, then you must attach the replacement policy before you can remove the default one. This is the authorization strategy of <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_about-scps.html#orgs_policies_whitelist">whitelisting</a>. If you instead attach a second SCP and leave the <code>FullAWSAccess</code> SCP still attached, and specify <code>"Effect": "Deny"</code> in the second SCP to override the <code>"Effect": "Allow"</code> in the <code>FullAWSAccess</code> policy (or any other attached SCP), then you are using the authorization strategy of <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_about-scps.html#orgs_policies_blacklist">blacklisting</a>. </p> <p>This operation can be called only from the organization's master account.</p>
@@ -147,7 +147,7 @@ detachPolicy :: forall eff. Service -> DetachPolicyRequest -> Aff (exception :: 
 #### `disableAWSServiceAccess`
 
 ``` purescript
-disableAWSServiceAccess :: forall eff. Service -> DisableAWSServiceAccessRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+disableAWSServiceAccess :: forall eff. Service -> DisableAWSServiceAccessRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Disables the integration of an AWS service (the service that is specified by <code>ServicePrincipal</code>) with AWS Organizations. When you disable integration, the specified service no longer can create a <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">service-linked role</a> in <i>new</i> accounts in your organization. This means the service can't perform operations on your behalf on any new accounts in your organization. The service can still perform operations in older accounts until the service completes its clean-up from AWS Organizations.</p> <p/> <important> <p>We recommend that you disable integration between AWS Organizations and the specified AWS service by using the console or commands that are provided by the specified service. Doing so ensures that the other service is aware that it can clean up any resources that are required only for the integration. How the service cleans up its resources in the organization's accounts depends on that service. For more information, see the documentation for the other AWS service.</p> </important> <p>After you perform the <code>DisableAWSServiceAccess</code> operation, the specified service can no longer perform operations in your organization's accounts unless the operations are explicitly permitted by the IAM policies that are attached to your roles. </p> <p>For more information about integrating other services with AWS Organizations, including the list of services that work with Organizations, see <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Integrating AWS Organizations with Other AWS Services</a> in the <i>AWS Organizations User Guide</i>.</p> <p>This operation can be called only from the organization's master account.</p>
@@ -163,7 +163,7 @@ disablePolicyType :: forall eff. Service -> DisablePolicyTypeRequest -> Aff (exc
 #### `enableAWSServiceAccess`
 
 ``` purescript
-enableAWSServiceAccess :: forall eff. Service -> EnableAWSServiceAccessRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+enableAWSServiceAccess :: forall eff. Service -> EnableAWSServiceAccessRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Enables the integration of an AWS service (the service that is specified by <code>ServicePrincipal</code>) with AWS Organizations. When you enable integration, you allow the specified service to create a <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/using-service-linked-roles.html">service-linked role</a> in all the accounts in your organization. This allows the service to perform operations on your behalf in your organization and its accounts.</p> <important> <p>We recommend that you enable integration between AWS Organizations and the specified AWS service by using the console or commands that are provided by the specified service. Doing so ensures that the service is aware that it can create the resources that are required for the integration. How the service creates those resources in the organization's accounts depends on that service. For more information, see the documentation for the other AWS service.</p> </important> <p>For more information about enabling services to integrate with AWS Organizations, see <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_integrate_services.html">Integrating AWS Organizations with Other AWS Services</a> in the <i>AWS Organizations User Guide</i>.</p> <p>This operation can be called only from the organization's master account and only if the organization has <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">enabled all features</a>.</p>
@@ -195,7 +195,7 @@ inviteAccountToOrganization :: forall eff. Service -> InviteAccountToOrganizatio
 #### `leaveOrganization`
 
 ``` purescript
-leaveOrganization :: forall eff. Service -> Aff (exception :: EXCEPTION | eff) NoOutput
+leaveOrganization :: forall eff. Service -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Removes a member account from its parent organization. This version of the operation is performed by the account that wants to leave. To remove a member account as a user in the master account, use <a>RemoveAccountFromOrganization</a> instead.</p> <p>This operation can be called only from a member account in the organization.</p> <important> <ul> <li> <p>The master account in an organization with all features enabled can set service control policies (SCPs) that can restrict what administrators of member accounts can do, including preventing them from successfully calling <code>LeaveOrganization</code> and leaving the organization. </p> </li> <li> <p>You can leave an organization as a member account only if the account is configured with the information required to operate as a standalone account. When you create an account in an organization using the AWS Organizations console, API, or CLI commands, the information required of standalone accounts is <i>not</i> automatically collected. For each account that you want to make standalone, you must accept the End User License Agreement (EULA), choose a support plan, provide and verify the required contact information, and provide a current payment method. AWS uses the payment method to charge for any billable (not free tier) AWS activity that occurs while the account is not attached to an organization. Follow the steps at <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"> To leave an organization when all required account information has not yet been provided</a> in the <i>AWS Organizations User Guide</i>.</p> </li> <li> <p>You can leave an organization only after you enable IAM user access to billing in your account. For more information, see <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate">Activating Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User Guide</i>.</p> </li> </ul> </important>
@@ -307,7 +307,7 @@ listTargetsForPolicy :: forall eff. Service -> ListTargetsForPolicyRequest -> Af
 #### `moveAccount`
 
 ``` purescript
-moveAccount :: forall eff. Service -> MoveAccountRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+moveAccount :: forall eff. Service -> MoveAccountRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Moves an account from its current source parent root or OU to the specified destination parent root or OU.</p> <p>This operation can be called only from the organization's master account.</p>
@@ -315,7 +315,7 @@ moveAccount :: forall eff. Service -> MoveAccountRequest -> Aff (exception :: EX
 #### `removeAccountFromOrganization`
 
 ``` purescript
-removeAccountFromOrganization :: forall eff. Service -> RemoveAccountFromOrganizationRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+removeAccountFromOrganization :: forall eff. Service -> RemoveAccountFromOrganizationRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Removes the specified account from the organization.</p> <p>The removed account becomes a stand-alone account that is not a member of any organization. It is no longer subject to any policies and is responsible for its own bill payments. The organization's master account is no longer charged for any expenses accrued by the member account after it is removed from the organization.</p> <p>This operation can be called only from the organization's master account. Member accounts can remove themselves with <a>LeaveOrganization</a> instead.</p> <important> <ul> <li> <p>You can remove an account from your organization only if the account is configured with the information required to operate as a standalone account. When you create an account in an organization using the AWS Organizations console, API, or CLI commands, the information required of standalone accounts is <i>not</i> automatically collected. For an account that you want to make standalone, you must accept the End User License Agreement (EULA), choose a support plan, provide and verify the required contact information, and provide a current payment method. AWS uses the payment method to charge for any billable (not free tier) AWS activity that occurs while the account is not attached to an organization. To remove an account that does not yet have this information, you must sign in as the member account and follow the steps at <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info"> To leave an organization when all required account information has not yet been provided</a> in the <i>AWS Organizations User Guide</i>.</p> </li> <li> <p>You can remove a member account only after you enable IAM user access to billing in the member account. For more information, see <a href="http://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/grantaccess.html#ControllingAccessWebsite-Activate">Activating Access to the Billing and Cost Management Console</a> in the <i>AWS Billing and Cost Management User Guide</i>.</p> </li> </ul> </important>

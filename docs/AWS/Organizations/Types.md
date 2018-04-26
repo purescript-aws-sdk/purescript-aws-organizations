@@ -10,7 +10,7 @@ options :: Options
 
 ``` purescript
 newtype AWSOrganizationsNotInUseException
-  = AWSOrganizationsNotInUseException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = AWSOrganizationsNotInUseException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>Your account is not a member of an organization. To make this request, you must use the credentials of an account that belongs to an organization.</p>
@@ -35,7 +35,7 @@ Constructs AWSOrganizationsNotInUseException from required parameters
 #### `newAWSOrganizationsNotInUseException'`
 
 ``` purescript
-newAWSOrganizationsNotInUseException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> AWSOrganizationsNotInUseException
+newAWSOrganizationsNotInUseException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> AWSOrganizationsNotInUseException
 ```
 
 Constructs AWSOrganizationsNotInUseException's fields from required parameters
@@ -76,7 +76,7 @@ Constructs AcceptHandshakeRequest's fields from required parameters
 
 ``` purescript
 newtype AcceptHandshakeResponse
-  = AcceptHandshakeResponse { "Handshake" :: NullOrUndefined (Handshake) }
+  = AcceptHandshakeResponse { "Handshake" :: Maybe (Handshake) }
 ```
 
 ##### Instances
@@ -99,7 +99,7 @@ Constructs AcceptHandshakeResponse from required parameters
 #### `newAcceptHandshakeResponse'`
 
 ``` purescript
-newAcceptHandshakeResponse' :: ({ "Handshake" :: NullOrUndefined (Handshake) } -> { "Handshake" :: NullOrUndefined (Handshake) }) -> AcceptHandshakeResponse
+newAcceptHandshakeResponse' :: ({ "Handshake" :: Maybe (Handshake) } -> { "Handshake" :: Maybe (Handshake) }) -> AcceptHandshakeResponse
 ```
 
 Constructs AcceptHandshakeResponse's fields from required parameters
@@ -108,7 +108,7 @@ Constructs AcceptHandshakeResponse's fields from required parameters
 
 ``` purescript
 newtype AccessDeniedException
-  = AccessDeniedException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = AccessDeniedException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>You don't have permissions to perform the requested operation. The user or role that is making the request must have at least one IAM permissions policy attached that grants the required permissions. For more information, see <a href="http://docs.aws.amazon.com/IAM/latest/UserGuide/access.html">Access Management</a> in the <i>IAM User Guide</i>.</p>
@@ -133,7 +133,7 @@ Constructs AccessDeniedException from required parameters
 #### `newAccessDeniedException'`
 
 ``` purescript
-newAccessDeniedException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> AccessDeniedException
+newAccessDeniedException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> AccessDeniedException
 ```
 
 Constructs AccessDeniedException's fields from required parameters
@@ -142,7 +142,7 @@ Constructs AccessDeniedException's fields from required parameters
 
 ``` purescript
 newtype AccessDeniedForDependencyException
-  = AccessDeniedForDependencyException { "Message" :: NullOrUndefined (ExceptionMessage), "Reason" :: NullOrUndefined (AccessDeniedForDependencyExceptionReason) }
+  = AccessDeniedForDependencyException { "Message" :: Maybe (ExceptionMessage), "Reason" :: Maybe (AccessDeniedForDependencyExceptionReason) }
 ```
 
 <p>The operation you attempted requires you to have the <code>iam:CreateServiceLinkedRole</code> so that Organizations can create the required service-linked role. You do not have that permission.</p>
@@ -167,7 +167,7 @@ Constructs AccessDeniedForDependencyException from required parameters
 #### `newAccessDeniedForDependencyException'`
 
 ``` purescript
-newAccessDeniedForDependencyException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage), "Reason" :: NullOrUndefined (AccessDeniedForDependencyExceptionReason) } -> { "Message" :: NullOrUndefined (ExceptionMessage), "Reason" :: NullOrUndefined (AccessDeniedForDependencyExceptionReason) }) -> AccessDeniedForDependencyException
+newAccessDeniedForDependencyException' :: ({ "Message" :: Maybe (ExceptionMessage), "Reason" :: Maybe (AccessDeniedForDependencyExceptionReason) } -> { "Message" :: Maybe (ExceptionMessage), "Reason" :: Maybe (AccessDeniedForDependencyExceptionReason) }) -> AccessDeniedForDependencyException
 ```
 
 Constructs AccessDeniedForDependencyException's fields from required parameters
@@ -192,7 +192,7 @@ Encode AccessDeniedForDependencyExceptionReason
 
 ``` purescript
 newtype Account
-  = Account { "Id" :: NullOrUndefined (AccountId), "Arn" :: NullOrUndefined (AccountArn), "Email" :: NullOrUndefined (Email), "Name" :: NullOrUndefined (AccountName), "Status" :: NullOrUndefined (AccountStatus), "JoinedMethod" :: NullOrUndefined (AccountJoinedMethod), "JoinedTimestamp" :: NullOrUndefined (Timestamp) }
+  = Account { "Id" :: Maybe (AccountId), "Arn" :: Maybe (AccountArn), "Email" :: Maybe (Email), "Name" :: Maybe (AccountName), "Status" :: Maybe (AccountStatus), "JoinedMethod" :: Maybe (AccountJoinedMethod), "JoinedTimestamp" :: Maybe (Timestamp) }
 ```
 
 <p>Contains information about an AWS account that is a member of an organization.</p>
@@ -217,7 +217,7 @@ Constructs Account from required parameters
 #### `newAccount'`
 
 ``` purescript
-newAccount' :: ({ "Id" :: NullOrUndefined (AccountId), "Arn" :: NullOrUndefined (AccountArn), "Email" :: NullOrUndefined (Email), "Name" :: NullOrUndefined (AccountName), "Status" :: NullOrUndefined (AccountStatus), "JoinedMethod" :: NullOrUndefined (AccountJoinedMethod), "JoinedTimestamp" :: NullOrUndefined (Timestamp) } -> { "Id" :: NullOrUndefined (AccountId), "Arn" :: NullOrUndefined (AccountArn), "Email" :: NullOrUndefined (Email), "Name" :: NullOrUndefined (AccountName), "Status" :: NullOrUndefined (AccountStatus), "JoinedMethod" :: NullOrUndefined (AccountJoinedMethod), "JoinedTimestamp" :: NullOrUndefined (Timestamp) }) -> Account
+newAccount' :: ({ "Id" :: Maybe (AccountId), "Arn" :: Maybe (AccountArn), "Email" :: Maybe (Email), "Name" :: Maybe (AccountName), "Status" :: Maybe (AccountStatus), "JoinedMethod" :: Maybe (AccountJoinedMethod), "JoinedTimestamp" :: Maybe (Timestamp) } -> { "Id" :: Maybe (AccountId), "Arn" :: Maybe (AccountArn), "Email" :: Maybe (Email), "Name" :: Maybe (AccountName), "Status" :: Maybe (AccountStatus), "JoinedMethod" :: Maybe (AccountJoinedMethod), "JoinedTimestamp" :: Maybe (Timestamp) }) -> Account
 ```
 
 Constructs Account's fields from required parameters
@@ -290,7 +290,7 @@ Encode AccountName
 
 ``` purescript
 newtype AccountNotFoundException
-  = AccountNotFoundException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = AccountNotFoundException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p> We can't find an AWS account with the AccountId that you specified, or the account whose credentials you used to make this request is not a member of an organization.</p>
@@ -315,7 +315,7 @@ Constructs AccountNotFoundException from required parameters
 #### `newAccountNotFoundException'`
 
 ``` purescript
-newAccountNotFoundException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> AccountNotFoundException
+newAccountNotFoundException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> AccountNotFoundException
 ```
 
 Constructs AccountNotFoundException's fields from required parameters
@@ -372,7 +372,7 @@ Encode ActionType
 
 ``` purescript
 newtype AlreadyInOrganizationException
-  = AlreadyInOrganizationException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = AlreadyInOrganizationException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>This account is already a member of an organization. An account can belong to only one organization at a time.</p>
@@ -397,7 +397,7 @@ Constructs AlreadyInOrganizationException from required parameters
 #### `newAlreadyInOrganizationException'`
 
 ``` purescript
-newAlreadyInOrganizationException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> AlreadyInOrganizationException
+newAlreadyInOrganizationException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> AlreadyInOrganizationException
 ```
 
 Constructs AlreadyInOrganizationException's fields from required parameters
@@ -486,7 +486,7 @@ Constructs CancelHandshakeRequest's fields from required parameters
 
 ``` purescript
 newtype CancelHandshakeResponse
-  = CancelHandshakeResponse { "Handshake" :: NullOrUndefined (Handshake) }
+  = CancelHandshakeResponse { "Handshake" :: Maybe (Handshake) }
 ```
 
 ##### Instances
@@ -509,7 +509,7 @@ Constructs CancelHandshakeResponse from required parameters
 #### `newCancelHandshakeResponse'`
 
 ``` purescript
-newCancelHandshakeResponse' :: ({ "Handshake" :: NullOrUndefined (Handshake) } -> { "Handshake" :: NullOrUndefined (Handshake) }) -> CancelHandshakeResponse
+newCancelHandshakeResponse' :: ({ "Handshake" :: Maybe (Handshake) } -> { "Handshake" :: Maybe (Handshake) }) -> CancelHandshakeResponse
 ```
 
 Constructs CancelHandshakeResponse's fields from required parameters
@@ -518,7 +518,7 @@ Constructs CancelHandshakeResponse's fields from required parameters
 
 ``` purescript
 newtype Child
-  = Child { "Id" :: NullOrUndefined (ChildId), "Type" :: NullOrUndefined (ChildType) }
+  = Child { "Id" :: Maybe (ChildId), "Type" :: Maybe (ChildType) }
 ```
 
 <p>Contains a list of child entities, either OUs or accounts.</p>
@@ -543,7 +543,7 @@ Constructs Child from required parameters
 #### `newChild'`
 
 ``` purescript
-newChild' :: ({ "Id" :: NullOrUndefined (ChildId), "Type" :: NullOrUndefined (ChildType) } -> { "Id" :: NullOrUndefined (ChildId), "Type" :: NullOrUndefined (ChildType) }) -> Child
+newChild' :: ({ "Id" :: Maybe (ChildId), "Type" :: Maybe (ChildType) } -> { "Id" :: Maybe (ChildId), "Type" :: Maybe (ChildType) }) -> Child
 ```
 
 Constructs Child's fields from required parameters
@@ -568,7 +568,7 @@ Encode ChildId
 
 ``` purescript
 newtype ChildNotFoundException
-  = ChildNotFoundException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = ChildNotFoundException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>We can't find an organizational unit (OU) or AWS account with the ChildId that you specified.</p>
@@ -593,7 +593,7 @@ Constructs ChildNotFoundException from required parameters
 #### `newChildNotFoundException'`
 
 ``` purescript
-newChildNotFoundException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> ChildNotFoundException
+newChildNotFoundException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> ChildNotFoundException
 ```
 
 Constructs ChildNotFoundException's fields from required parameters
@@ -634,7 +634,7 @@ Encode Children
 
 ``` purescript
 newtype ConcurrentModificationException
-  = ConcurrentModificationException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = ConcurrentModificationException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>The target of the operation is currently being modified by a different request. Try again later.</p>
@@ -659,7 +659,7 @@ Constructs ConcurrentModificationException from required parameters
 #### `newConcurrentModificationException'`
 
 ``` purescript
-newConcurrentModificationException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> ConcurrentModificationException
+newConcurrentModificationException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> ConcurrentModificationException
 ```
 
 Constructs ConcurrentModificationException's fields from required parameters
@@ -668,7 +668,7 @@ Constructs ConcurrentModificationException's fields from required parameters
 
 ``` purescript
 newtype ConstraintViolationException
-  = ConstraintViolationException { "Message" :: NullOrUndefined (ExceptionMessage), "Reason" :: NullOrUndefined (ConstraintViolationExceptionReason) }
+  = ConstraintViolationException { "Message" :: Maybe (ExceptionMessage), "Reason" :: Maybe (ConstraintViolationExceptionReason) }
 ```
 
 <p>Performing this operation violates a minimum or maximum value limit. For example, attempting to removing the last SCP from an OU or root, inviting or creating too many accounts to the organization, or attaching too many policies to an account, OU, or root. This exception includes a reason that contains additional information about the violated limit:</p> <p/> <note> <p>Some of the reasons in the following list might not be applicable to this specific API or operation:</p> </note> <ul> <li> <p>ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an organization. If you need more accounts, contact AWS Support to request an increase in your limit. </p> <p>Or, The number of invitations that you tried to send would cause you to exceed the limit of accounts in your organization. Send fewer invitations, or contact AWS Support to request an increase in the number of accounts.</p> <p> <b>Note</b>: deleted and closed accounts still count toward your limit.</p> <important> <p>If you get an exception that indicates that you exceeded your account limits for the organization or that you can"t add an account because your organization is still initializing, please contact <a href="https://console.aws.amazon.com/support/home#/"> AWS Customer Support</a>.</p> </important> </li> <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes you can send in one day.</p> </li> <li> <p>OU_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the number of organizational units you can have in an organization.</p> </li> <li> <p>OU_DEPTH_LIMIT_EXCEEDED: You attempted to create an organizational unit tree that is too many levels deep.</p> </li> <li> <p>POLICY_NUMBER_LIMIT_EXCEEDED. You attempted to exceed the number of policies that you can have in an organization.</p> </li> <li> <p>MAX_POLICY_TYPE_ATTACHMENT_LIMIT_EXCEEDED: You attempted to exceed the number of policies of a certain type that can be attached to an entity at one time.</p> </li> <li> <p>MIN_POLICY_TYPE_ATTACHMENT_LIMIT_EXCEEDED: You attempted to detach a policy from an entity that would cause the entity to have fewer than the minimum number of policies of a certain type required.</p> </li> <li> <p>ACCOUNT_CANNOT_LEAVE_WITHOUT_EULA: You attempted to remove an account from the organization that does not yet have enough information to exist as a stand-alone account. This account requires you to first agree to the AWS Customer Agreement. Follow the steps at <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info">To leave an organization when all required account information has not yet been provided</a> in the <i>AWS Organizations User Guide</i>.</p> </li> <li> <p>ACCOUNT_CANNOT_LEAVE_WITHOUT_PHONE_VERIFICATION: You attempted to remove an account from the organization that does not yet have enough information to exist as a stand-alone account. This account requires you to first complete phone verification. Follow the steps at <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info">To leave an organization when all required account information has not yet been provided</a> in the <i>AWS Organizations User Guide</i>.</p> </li> <li> <p>MASTER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To create an organization with this account, you first must associate a payment instrument, such as a credit card, with the account. Follow the steps at <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info">To leave an organization when all required account information has not yet been provided</a> in the <i>AWS Organizations User Guide</i>.</p> </li> <li> <p>MEMBER_ACCOUNT_PAYMENT_INSTRUMENT_REQUIRED: To complete this operation with this member account, you first must associate a payment instrument, such as a credit card, with the account. Follow the steps at <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_remove.html#leave-without-all-info">To leave an organization when all required account information has not yet been provided</a> in the <i>AWS Organizations User Guide</i>.</p> </li> <li> <p>ACCOUNT_CREATION_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of accounts that you can create in one day.</p> </li> <li> <p>MASTER_ACCOUNT_ADDRESS_DOES_NOT_MATCH_MARKETPLACE: To create an account in this organization, you first must migrate the organization's master account to the marketplace that corresponds to the master account's address. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be associated with the same marketplace.</p> </li> <li> <p>MASTER_ACCOUNT_MISSING_CONTACT_INFO: To complete this operation, you must first provide contact a valid address and phone number for the master account. Then try the operation again.</p> </li> </ul>
@@ -693,7 +693,7 @@ Constructs ConstraintViolationException from required parameters
 #### `newConstraintViolationException'`
 
 ``` purescript
-newConstraintViolationException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage), "Reason" :: NullOrUndefined (ConstraintViolationExceptionReason) } -> { "Message" :: NullOrUndefined (ExceptionMessage), "Reason" :: NullOrUndefined (ConstraintViolationExceptionReason) }) -> ConstraintViolationException
+newConstraintViolationException' :: ({ "Message" :: Maybe (ExceptionMessage), "Reason" :: Maybe (ConstraintViolationExceptionReason) } -> { "Message" :: Maybe (ExceptionMessage), "Reason" :: Maybe (ConstraintViolationExceptionReason) }) -> ConstraintViolationException
 ```
 
 Constructs ConstraintViolationException's fields from required parameters
@@ -734,7 +734,7 @@ Encode CreateAccountFailureReason
 
 ``` purescript
 newtype CreateAccountRequest
-  = CreateAccountRequest { "Email" :: Email, "AccountName" :: AccountName, "RoleName" :: NullOrUndefined (RoleName), "IamUserAccessToBilling" :: NullOrUndefined (IAMUserAccessToBilling) }
+  = CreateAccountRequest { "Email" :: Email, "AccountName" :: AccountName, "RoleName" :: Maybe (RoleName), "IamUserAccessToBilling" :: Maybe (IAMUserAccessToBilling) }
 ```
 
 ##### Instances
@@ -757,7 +757,7 @@ Constructs CreateAccountRequest from required parameters
 #### `newCreateAccountRequest'`
 
 ``` purescript
-newCreateAccountRequest' :: AccountName -> Email -> ({ "Email" :: Email, "AccountName" :: AccountName, "RoleName" :: NullOrUndefined (RoleName), "IamUserAccessToBilling" :: NullOrUndefined (IAMUserAccessToBilling) } -> { "Email" :: Email, "AccountName" :: AccountName, "RoleName" :: NullOrUndefined (RoleName), "IamUserAccessToBilling" :: NullOrUndefined (IAMUserAccessToBilling) }) -> CreateAccountRequest
+newCreateAccountRequest' :: AccountName -> Email -> ({ "Email" :: Email, "AccountName" :: AccountName, "RoleName" :: Maybe (RoleName), "IamUserAccessToBilling" :: Maybe (IAMUserAccessToBilling) } -> { "Email" :: Email, "AccountName" :: AccountName, "RoleName" :: Maybe (RoleName), "IamUserAccessToBilling" :: Maybe (IAMUserAccessToBilling) }) -> CreateAccountRequest
 ```
 
 Constructs CreateAccountRequest's fields from required parameters
@@ -782,7 +782,7 @@ Encode CreateAccountRequestId
 
 ``` purescript
 newtype CreateAccountResponse
-  = CreateAccountResponse { "CreateAccountStatus" :: NullOrUndefined (CreateAccountStatus) }
+  = CreateAccountResponse { "CreateAccountStatus" :: Maybe (CreateAccountStatus) }
 ```
 
 ##### Instances
@@ -805,7 +805,7 @@ Constructs CreateAccountResponse from required parameters
 #### `newCreateAccountResponse'`
 
 ``` purescript
-newCreateAccountResponse' :: ({ "CreateAccountStatus" :: NullOrUndefined (CreateAccountStatus) } -> { "CreateAccountStatus" :: NullOrUndefined (CreateAccountStatus) }) -> CreateAccountResponse
+newCreateAccountResponse' :: ({ "CreateAccountStatus" :: Maybe (CreateAccountStatus) } -> { "CreateAccountStatus" :: Maybe (CreateAccountStatus) }) -> CreateAccountResponse
 ```
 
 Constructs CreateAccountResponse's fields from required parameters
@@ -846,7 +846,7 @@ Encode CreateAccountStates
 
 ``` purescript
 newtype CreateAccountStatus
-  = CreateAccountStatus { "Id" :: NullOrUndefined (CreateAccountRequestId), "AccountName" :: NullOrUndefined (AccountName), "State" :: NullOrUndefined (CreateAccountState), "RequestedTimestamp" :: NullOrUndefined (Timestamp), "CompletedTimestamp" :: NullOrUndefined (Timestamp), "AccountId" :: NullOrUndefined (AccountId), "FailureReason" :: NullOrUndefined (CreateAccountFailureReason) }
+  = CreateAccountStatus { "Id" :: Maybe (CreateAccountRequestId), "AccountName" :: Maybe (AccountName), "State" :: Maybe (CreateAccountState), "RequestedTimestamp" :: Maybe (Timestamp), "CompletedTimestamp" :: Maybe (Timestamp), "AccountId" :: Maybe (AccountId), "FailureReason" :: Maybe (CreateAccountFailureReason) }
 ```
 
 <p>Contains the status about a <a>CreateAccount</a> request to create an AWS account in an organization.</p>
@@ -871,7 +871,7 @@ Constructs CreateAccountStatus from required parameters
 #### `newCreateAccountStatus'`
 
 ``` purescript
-newCreateAccountStatus' :: ({ "Id" :: NullOrUndefined (CreateAccountRequestId), "AccountName" :: NullOrUndefined (AccountName), "State" :: NullOrUndefined (CreateAccountState), "RequestedTimestamp" :: NullOrUndefined (Timestamp), "CompletedTimestamp" :: NullOrUndefined (Timestamp), "AccountId" :: NullOrUndefined (AccountId), "FailureReason" :: NullOrUndefined (CreateAccountFailureReason) } -> { "Id" :: NullOrUndefined (CreateAccountRequestId), "AccountName" :: NullOrUndefined (AccountName), "State" :: NullOrUndefined (CreateAccountState), "RequestedTimestamp" :: NullOrUndefined (Timestamp), "CompletedTimestamp" :: NullOrUndefined (Timestamp), "AccountId" :: NullOrUndefined (AccountId), "FailureReason" :: NullOrUndefined (CreateAccountFailureReason) }) -> CreateAccountStatus
+newCreateAccountStatus' :: ({ "Id" :: Maybe (CreateAccountRequestId), "AccountName" :: Maybe (AccountName), "State" :: Maybe (CreateAccountState), "RequestedTimestamp" :: Maybe (Timestamp), "CompletedTimestamp" :: Maybe (Timestamp), "AccountId" :: Maybe (AccountId), "FailureReason" :: Maybe (CreateAccountFailureReason) } -> { "Id" :: Maybe (CreateAccountRequestId), "AccountName" :: Maybe (AccountName), "State" :: Maybe (CreateAccountState), "RequestedTimestamp" :: Maybe (Timestamp), "CompletedTimestamp" :: Maybe (Timestamp), "AccountId" :: Maybe (AccountId), "FailureReason" :: Maybe (CreateAccountFailureReason) }) -> CreateAccountStatus
 ```
 
 Constructs CreateAccountStatus's fields from required parameters
@@ -880,7 +880,7 @@ Constructs CreateAccountStatus's fields from required parameters
 
 ``` purescript
 newtype CreateAccountStatusNotFoundException
-  = CreateAccountStatusNotFoundException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = CreateAccountStatusNotFoundException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>We can't find an create account request with the CreateAccountRequestId that you specified.</p>
@@ -905,7 +905,7 @@ Constructs CreateAccountStatusNotFoundException from required parameters
 #### `newCreateAccountStatusNotFoundException'`
 
 ``` purescript
-newCreateAccountStatusNotFoundException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> CreateAccountStatusNotFoundException
+newCreateAccountStatusNotFoundException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> CreateAccountStatusNotFoundException
 ```
 
 Constructs CreateAccountStatusNotFoundException's fields from required parameters
@@ -930,7 +930,7 @@ Encode CreateAccountStatuses
 
 ``` purescript
 newtype CreateOrganizationRequest
-  = CreateOrganizationRequest { "FeatureSet" :: NullOrUndefined (OrganizationFeatureSet) }
+  = CreateOrganizationRequest { "FeatureSet" :: Maybe (OrganizationFeatureSet) }
 ```
 
 ##### Instances
@@ -953,7 +953,7 @@ Constructs CreateOrganizationRequest from required parameters
 #### `newCreateOrganizationRequest'`
 
 ``` purescript
-newCreateOrganizationRequest' :: ({ "FeatureSet" :: NullOrUndefined (OrganizationFeatureSet) } -> { "FeatureSet" :: NullOrUndefined (OrganizationFeatureSet) }) -> CreateOrganizationRequest
+newCreateOrganizationRequest' :: ({ "FeatureSet" :: Maybe (OrganizationFeatureSet) } -> { "FeatureSet" :: Maybe (OrganizationFeatureSet) }) -> CreateOrganizationRequest
 ```
 
 Constructs CreateOrganizationRequest's fields from required parameters
@@ -962,7 +962,7 @@ Constructs CreateOrganizationRequest's fields from required parameters
 
 ``` purescript
 newtype CreateOrganizationResponse
-  = CreateOrganizationResponse { "Organization" :: NullOrUndefined (Organization) }
+  = CreateOrganizationResponse { "Organization" :: Maybe (Organization) }
 ```
 
 ##### Instances
@@ -985,7 +985,7 @@ Constructs CreateOrganizationResponse from required parameters
 #### `newCreateOrganizationResponse'`
 
 ``` purescript
-newCreateOrganizationResponse' :: ({ "Organization" :: NullOrUndefined (Organization) } -> { "Organization" :: NullOrUndefined (Organization) }) -> CreateOrganizationResponse
+newCreateOrganizationResponse' :: ({ "Organization" :: Maybe (Organization) } -> { "Organization" :: Maybe (Organization) }) -> CreateOrganizationResponse
 ```
 
 Constructs CreateOrganizationResponse's fields from required parameters
@@ -1026,7 +1026,7 @@ Constructs CreateOrganizationalUnitRequest's fields from required parameters
 
 ``` purescript
 newtype CreateOrganizationalUnitResponse
-  = CreateOrganizationalUnitResponse { "OrganizationalUnit" :: NullOrUndefined (OrganizationalUnit) }
+  = CreateOrganizationalUnitResponse { "OrganizationalUnit" :: Maybe (OrganizationalUnit) }
 ```
 
 ##### Instances
@@ -1049,7 +1049,7 @@ Constructs CreateOrganizationalUnitResponse from required parameters
 #### `newCreateOrganizationalUnitResponse'`
 
 ``` purescript
-newCreateOrganizationalUnitResponse' :: ({ "OrganizationalUnit" :: NullOrUndefined (OrganizationalUnit) } -> { "OrganizationalUnit" :: NullOrUndefined (OrganizationalUnit) }) -> CreateOrganizationalUnitResponse
+newCreateOrganizationalUnitResponse' :: ({ "OrganizationalUnit" :: Maybe (OrganizationalUnit) } -> { "OrganizationalUnit" :: Maybe (OrganizationalUnit) }) -> CreateOrganizationalUnitResponse
 ```
 
 Constructs CreateOrganizationalUnitResponse's fields from required parameters
@@ -1090,7 +1090,7 @@ Constructs CreatePolicyRequest's fields from required parameters
 
 ``` purescript
 newtype CreatePolicyResponse
-  = CreatePolicyResponse { "Policy" :: NullOrUndefined (Policy) }
+  = CreatePolicyResponse { "Policy" :: Maybe (Policy) }
 ```
 
 ##### Instances
@@ -1113,7 +1113,7 @@ Constructs CreatePolicyResponse from required parameters
 #### `newCreatePolicyResponse'`
 
 ``` purescript
-newCreatePolicyResponse' :: ({ "Policy" :: NullOrUndefined (Policy) } -> { "Policy" :: NullOrUndefined (Policy) }) -> CreatePolicyResponse
+newCreatePolicyResponse' :: ({ "Policy" :: Maybe (Policy) } -> { "Policy" :: Maybe (Policy) }) -> CreatePolicyResponse
 ```
 
 Constructs CreatePolicyResponse's fields from required parameters
@@ -1154,7 +1154,7 @@ Constructs DeclineHandshakeRequest's fields from required parameters
 
 ``` purescript
 newtype DeclineHandshakeResponse
-  = DeclineHandshakeResponse { "Handshake" :: NullOrUndefined (Handshake) }
+  = DeclineHandshakeResponse { "Handshake" :: Maybe (Handshake) }
 ```
 
 ##### Instances
@@ -1177,7 +1177,7 @@ Constructs DeclineHandshakeResponse from required parameters
 #### `newDeclineHandshakeResponse'`
 
 ``` purescript
-newDeclineHandshakeResponse' :: ({ "Handshake" :: NullOrUndefined (Handshake) } -> { "Handshake" :: NullOrUndefined (Handshake) }) -> DeclineHandshakeResponse
+newDeclineHandshakeResponse' :: ({ "Handshake" :: Maybe (Handshake) } -> { "Handshake" :: Maybe (Handshake) }) -> DeclineHandshakeResponse
 ```
 
 Constructs DeclineHandshakeResponse's fields from required parameters
@@ -1282,7 +1282,7 @@ Constructs DescribeAccountRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeAccountResponse
-  = DescribeAccountResponse { "Account" :: NullOrUndefined (Account) }
+  = DescribeAccountResponse { "Account" :: Maybe (Account) }
 ```
 
 ##### Instances
@@ -1305,7 +1305,7 @@ Constructs DescribeAccountResponse from required parameters
 #### `newDescribeAccountResponse'`
 
 ``` purescript
-newDescribeAccountResponse' :: ({ "Account" :: NullOrUndefined (Account) } -> { "Account" :: NullOrUndefined (Account) }) -> DescribeAccountResponse
+newDescribeAccountResponse' :: ({ "Account" :: Maybe (Account) } -> { "Account" :: Maybe (Account) }) -> DescribeAccountResponse
 ```
 
 Constructs DescribeAccountResponse's fields from required parameters
@@ -1346,7 +1346,7 @@ Constructs DescribeCreateAccountStatusRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeCreateAccountStatusResponse
-  = DescribeCreateAccountStatusResponse { "CreateAccountStatus" :: NullOrUndefined (CreateAccountStatus) }
+  = DescribeCreateAccountStatusResponse { "CreateAccountStatus" :: Maybe (CreateAccountStatus) }
 ```
 
 ##### Instances
@@ -1369,7 +1369,7 @@ Constructs DescribeCreateAccountStatusResponse from required parameters
 #### `newDescribeCreateAccountStatusResponse'`
 
 ``` purescript
-newDescribeCreateAccountStatusResponse' :: ({ "CreateAccountStatus" :: NullOrUndefined (CreateAccountStatus) } -> { "CreateAccountStatus" :: NullOrUndefined (CreateAccountStatus) }) -> DescribeCreateAccountStatusResponse
+newDescribeCreateAccountStatusResponse' :: ({ "CreateAccountStatus" :: Maybe (CreateAccountStatus) } -> { "CreateAccountStatus" :: Maybe (CreateAccountStatus) }) -> DescribeCreateAccountStatusResponse
 ```
 
 Constructs DescribeCreateAccountStatusResponse's fields from required parameters
@@ -1410,7 +1410,7 @@ Constructs DescribeHandshakeRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeHandshakeResponse
-  = DescribeHandshakeResponse { "Handshake" :: NullOrUndefined (Handshake) }
+  = DescribeHandshakeResponse { "Handshake" :: Maybe (Handshake) }
 ```
 
 ##### Instances
@@ -1433,7 +1433,7 @@ Constructs DescribeHandshakeResponse from required parameters
 #### `newDescribeHandshakeResponse'`
 
 ``` purescript
-newDescribeHandshakeResponse' :: ({ "Handshake" :: NullOrUndefined (Handshake) } -> { "Handshake" :: NullOrUndefined (Handshake) }) -> DescribeHandshakeResponse
+newDescribeHandshakeResponse' :: ({ "Handshake" :: Maybe (Handshake) } -> { "Handshake" :: Maybe (Handshake) }) -> DescribeHandshakeResponse
 ```
 
 Constructs DescribeHandshakeResponse's fields from required parameters
@@ -1442,7 +1442,7 @@ Constructs DescribeHandshakeResponse's fields from required parameters
 
 ``` purescript
 newtype DescribeOrganizationResponse
-  = DescribeOrganizationResponse { "Organization" :: NullOrUndefined (Organization) }
+  = DescribeOrganizationResponse { "Organization" :: Maybe (Organization) }
 ```
 
 ##### Instances
@@ -1465,7 +1465,7 @@ Constructs DescribeOrganizationResponse from required parameters
 #### `newDescribeOrganizationResponse'`
 
 ``` purescript
-newDescribeOrganizationResponse' :: ({ "Organization" :: NullOrUndefined (Organization) } -> { "Organization" :: NullOrUndefined (Organization) }) -> DescribeOrganizationResponse
+newDescribeOrganizationResponse' :: ({ "Organization" :: Maybe (Organization) } -> { "Organization" :: Maybe (Organization) }) -> DescribeOrganizationResponse
 ```
 
 Constructs DescribeOrganizationResponse's fields from required parameters
@@ -1506,7 +1506,7 @@ Constructs DescribeOrganizationalUnitRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeOrganizationalUnitResponse
-  = DescribeOrganizationalUnitResponse { "OrganizationalUnit" :: NullOrUndefined (OrganizationalUnit) }
+  = DescribeOrganizationalUnitResponse { "OrganizationalUnit" :: Maybe (OrganizationalUnit) }
 ```
 
 ##### Instances
@@ -1529,7 +1529,7 @@ Constructs DescribeOrganizationalUnitResponse from required parameters
 #### `newDescribeOrganizationalUnitResponse'`
 
 ``` purescript
-newDescribeOrganizationalUnitResponse' :: ({ "OrganizationalUnit" :: NullOrUndefined (OrganizationalUnit) } -> { "OrganizationalUnit" :: NullOrUndefined (OrganizationalUnit) }) -> DescribeOrganizationalUnitResponse
+newDescribeOrganizationalUnitResponse' :: ({ "OrganizationalUnit" :: Maybe (OrganizationalUnit) } -> { "OrganizationalUnit" :: Maybe (OrganizationalUnit) }) -> DescribeOrganizationalUnitResponse
 ```
 
 Constructs DescribeOrganizationalUnitResponse's fields from required parameters
@@ -1570,7 +1570,7 @@ Constructs DescribePolicyRequest's fields from required parameters
 
 ``` purescript
 newtype DescribePolicyResponse
-  = DescribePolicyResponse { "Policy" :: NullOrUndefined (Policy) }
+  = DescribePolicyResponse { "Policy" :: Maybe (Policy) }
 ```
 
 ##### Instances
@@ -1593,7 +1593,7 @@ Constructs DescribePolicyResponse from required parameters
 #### `newDescribePolicyResponse'`
 
 ``` purescript
-newDescribePolicyResponse' :: ({ "Policy" :: NullOrUndefined (Policy) } -> { "Policy" :: NullOrUndefined (Policy) }) -> DescribePolicyResponse
+newDescribePolicyResponse' :: ({ "Policy" :: Maybe (Policy) } -> { "Policy" :: Maybe (Policy) }) -> DescribePolicyResponse
 ```
 
 Constructs DescribePolicyResponse's fields from required parameters
@@ -1602,7 +1602,7 @@ Constructs DescribePolicyResponse's fields from required parameters
 
 ``` purescript
 newtype DestinationParentNotFoundException
-  = DestinationParentNotFoundException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = DestinationParentNotFoundException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>We can't find the destination container (a root or OU) with the ParentId that you specified.</p>
@@ -1627,7 +1627,7 @@ Constructs DestinationParentNotFoundException from required parameters
 #### `newDestinationParentNotFoundException'`
 
 ``` purescript
-newDestinationParentNotFoundException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> DestinationParentNotFoundException
+newDestinationParentNotFoundException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> DestinationParentNotFoundException
 ```
 
 Constructs DestinationParentNotFoundException's fields from required parameters
@@ -1732,7 +1732,7 @@ Constructs DisablePolicyTypeRequest's fields from required parameters
 
 ``` purescript
 newtype DisablePolicyTypeResponse
-  = DisablePolicyTypeResponse { "Root" :: NullOrUndefined (Root) }
+  = DisablePolicyTypeResponse { "Root" :: Maybe (Root) }
 ```
 
 ##### Instances
@@ -1755,7 +1755,7 @@ Constructs DisablePolicyTypeResponse from required parameters
 #### `newDisablePolicyTypeResponse'`
 
 ``` purescript
-newDisablePolicyTypeResponse' :: ({ "Root" :: NullOrUndefined (Root) } -> { "Root" :: NullOrUndefined (Root) }) -> DisablePolicyTypeResponse
+newDisablePolicyTypeResponse' :: ({ "Root" :: Maybe (Root) } -> { "Root" :: Maybe (Root) }) -> DisablePolicyTypeResponse
 ```
 
 Constructs DisablePolicyTypeResponse's fields from required parameters
@@ -1764,7 +1764,7 @@ Constructs DisablePolicyTypeResponse's fields from required parameters
 
 ``` purescript
 newtype DuplicateAccountException
-  = DuplicateAccountException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = DuplicateAccountException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>That account is already present in the specified destination.</p>
@@ -1789,7 +1789,7 @@ Constructs DuplicateAccountException from required parameters
 #### `newDuplicateAccountException'`
 
 ``` purescript
-newDuplicateAccountException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> DuplicateAccountException
+newDuplicateAccountException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> DuplicateAccountException
 ```
 
 Constructs DuplicateAccountException's fields from required parameters
@@ -1798,7 +1798,7 @@ Constructs DuplicateAccountException's fields from required parameters
 
 ``` purescript
 newtype DuplicateHandshakeException
-  = DuplicateHandshakeException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = DuplicateHandshakeException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>A handshake with the same action and target already exists. For example, if you invited an account to join your organization, the invited account might already have a pending invitation from this organization. If you intend to resend an invitation to an account, ensure that existing handshakes that might be considered duplicates are canceled or declined.</p>
@@ -1823,7 +1823,7 @@ Constructs DuplicateHandshakeException from required parameters
 #### `newDuplicateHandshakeException'`
 
 ``` purescript
-newDuplicateHandshakeException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> DuplicateHandshakeException
+newDuplicateHandshakeException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> DuplicateHandshakeException
 ```
 
 Constructs DuplicateHandshakeException's fields from required parameters
@@ -1832,7 +1832,7 @@ Constructs DuplicateHandshakeException's fields from required parameters
 
 ``` purescript
 newtype DuplicateOrganizationalUnitException
-  = DuplicateOrganizationalUnitException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = DuplicateOrganizationalUnitException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>An organizational unit (OU) with the same name already exists.</p>
@@ -1857,7 +1857,7 @@ Constructs DuplicateOrganizationalUnitException from required parameters
 #### `newDuplicateOrganizationalUnitException'`
 
 ``` purescript
-newDuplicateOrganizationalUnitException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> DuplicateOrganizationalUnitException
+newDuplicateOrganizationalUnitException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> DuplicateOrganizationalUnitException
 ```
 
 Constructs DuplicateOrganizationalUnitException's fields from required parameters
@@ -1866,7 +1866,7 @@ Constructs DuplicateOrganizationalUnitException's fields from required parameter
 
 ``` purescript
 newtype DuplicatePolicyAttachmentException
-  = DuplicatePolicyAttachmentException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = DuplicatePolicyAttachmentException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>The selected policy is already attached to the specified target.</p>
@@ -1891,7 +1891,7 @@ Constructs DuplicatePolicyAttachmentException from required parameters
 #### `newDuplicatePolicyAttachmentException'`
 
 ``` purescript
-newDuplicatePolicyAttachmentException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> DuplicatePolicyAttachmentException
+newDuplicatePolicyAttachmentException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> DuplicatePolicyAttachmentException
 ```
 
 Constructs DuplicatePolicyAttachmentException's fields from required parameters
@@ -1900,7 +1900,7 @@ Constructs DuplicatePolicyAttachmentException's fields from required parameters
 
 ``` purescript
 newtype DuplicatePolicyException
-  = DuplicatePolicyException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = DuplicatePolicyException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>A policy with the same name already exists.</p>
@@ -1925,7 +1925,7 @@ Constructs DuplicatePolicyException from required parameters
 #### `newDuplicatePolicyException'`
 
 ``` purescript
-newDuplicatePolicyException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> DuplicatePolicyException
+newDuplicatePolicyException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> DuplicatePolicyException
 ```
 
 Constructs DuplicatePolicyException's fields from required parameters
@@ -1998,7 +1998,7 @@ Encode EnableAllFeaturesRequest
 
 ``` purescript
 newtype EnableAllFeaturesResponse
-  = EnableAllFeaturesResponse { "Handshake" :: NullOrUndefined (Handshake) }
+  = EnableAllFeaturesResponse { "Handshake" :: Maybe (Handshake) }
 ```
 
 ##### Instances
@@ -2021,7 +2021,7 @@ Constructs EnableAllFeaturesResponse from required parameters
 #### `newEnableAllFeaturesResponse'`
 
 ``` purescript
-newEnableAllFeaturesResponse' :: ({ "Handshake" :: NullOrUndefined (Handshake) } -> { "Handshake" :: NullOrUndefined (Handshake) }) -> EnableAllFeaturesResponse
+newEnableAllFeaturesResponse' :: ({ "Handshake" :: Maybe (Handshake) } -> { "Handshake" :: Maybe (Handshake) }) -> EnableAllFeaturesResponse
 ```
 
 Constructs EnableAllFeaturesResponse's fields from required parameters
@@ -2062,7 +2062,7 @@ Constructs EnablePolicyTypeRequest's fields from required parameters
 
 ``` purescript
 newtype EnablePolicyTypeResponse
-  = EnablePolicyTypeResponse { "Root" :: NullOrUndefined (Root) }
+  = EnablePolicyTypeResponse { "Root" :: Maybe (Root) }
 ```
 
 ##### Instances
@@ -2085,7 +2085,7 @@ Constructs EnablePolicyTypeResponse from required parameters
 #### `newEnablePolicyTypeResponse'`
 
 ``` purescript
-newEnablePolicyTypeResponse' :: ({ "Root" :: NullOrUndefined (Root) } -> { "Root" :: NullOrUndefined (Root) }) -> EnablePolicyTypeResponse
+newEnablePolicyTypeResponse' :: ({ "Root" :: Maybe (Root) } -> { "Root" :: Maybe (Root) }) -> EnablePolicyTypeResponse
 ```
 
 Constructs EnablePolicyTypeResponse's fields from required parameters
@@ -2094,7 +2094,7 @@ Constructs EnablePolicyTypeResponse's fields from required parameters
 
 ``` purescript
 newtype EnabledServicePrincipal
-  = EnabledServicePrincipal { "ServicePrincipal" :: NullOrUndefined (ServicePrincipal), "DateEnabled" :: NullOrUndefined (Timestamp) }
+  = EnabledServicePrincipal { "ServicePrincipal" :: Maybe (ServicePrincipal), "DateEnabled" :: Maybe (Timestamp) }
 ```
 
 <p>A structure that contains details of a service principal that is enabled to integrate with AWS Organizations.</p>
@@ -2119,7 +2119,7 @@ Constructs EnabledServicePrincipal from required parameters
 #### `newEnabledServicePrincipal'`
 
 ``` purescript
-newEnabledServicePrincipal' :: ({ "ServicePrincipal" :: NullOrUndefined (ServicePrincipal), "DateEnabled" :: NullOrUndefined (Timestamp) } -> { "ServicePrincipal" :: NullOrUndefined (ServicePrincipal), "DateEnabled" :: NullOrUndefined (Timestamp) }) -> EnabledServicePrincipal
+newEnabledServicePrincipal' :: ({ "ServicePrincipal" :: Maybe (ServicePrincipal), "DateEnabled" :: Maybe (Timestamp) } -> { "ServicePrincipal" :: Maybe (ServicePrincipal), "DateEnabled" :: Maybe (Timestamp) }) -> EnabledServicePrincipal
 ```
 
 Constructs EnabledServicePrincipal's fields from required parameters
@@ -2176,7 +2176,7 @@ Encode ExceptionType
 
 ``` purescript
 newtype FinalizingOrganizationException
-  = FinalizingOrganizationException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = FinalizingOrganizationException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>AWS Organizations could not finalize the creation of your organization. Try again later. If this persists, contact AWS customer support.</p>
@@ -2201,7 +2201,7 @@ Constructs FinalizingOrganizationException from required parameters
 #### `newFinalizingOrganizationException'`
 
 ``` purescript
-newFinalizingOrganizationException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> FinalizingOrganizationException
+newFinalizingOrganizationException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> FinalizingOrganizationException
 ```
 
 Constructs FinalizingOrganizationException's fields from required parameters
@@ -2226,7 +2226,7 @@ Encode GenericArn
 
 ``` purescript
 newtype Handshake
-  = Handshake { "Id" :: NullOrUndefined (HandshakeId), "Arn" :: NullOrUndefined (HandshakeArn), "Parties" :: NullOrUndefined (HandshakeParties), "State" :: NullOrUndefined (HandshakeState), "RequestedTimestamp" :: NullOrUndefined (Timestamp), "ExpirationTimestamp" :: NullOrUndefined (Timestamp), "Action" :: NullOrUndefined (ActionType), "Resources" :: NullOrUndefined (HandshakeResources) }
+  = Handshake { "Id" :: Maybe (HandshakeId), "Arn" :: Maybe (HandshakeArn), "Parties" :: Maybe (HandshakeParties), "State" :: Maybe (HandshakeState), "RequestedTimestamp" :: Maybe (Timestamp), "ExpirationTimestamp" :: Maybe (Timestamp), "Action" :: Maybe (ActionType), "Resources" :: Maybe (HandshakeResources) }
 ```
 
 <p>Contains information that must be exchanged to securely establish a relationship between two accounts (an <i>originator</i> and a <i>recipient</i>). For example, when a master account (the originator) invites another account (the recipient) to join its organization, the two accounts exchange information as a series of handshake requests and responses.</p> <p> <b>Note:</b> Handshakes that are CANCELED, ACCEPTED, or DECLINED show up in lists for only 30 days after entering that state After that they are deleted.</p>
@@ -2251,7 +2251,7 @@ Constructs Handshake from required parameters
 #### `newHandshake'`
 
 ``` purescript
-newHandshake' :: ({ "Id" :: NullOrUndefined (HandshakeId), "Arn" :: NullOrUndefined (HandshakeArn), "Parties" :: NullOrUndefined (HandshakeParties), "State" :: NullOrUndefined (HandshakeState), "RequestedTimestamp" :: NullOrUndefined (Timestamp), "ExpirationTimestamp" :: NullOrUndefined (Timestamp), "Action" :: NullOrUndefined (ActionType), "Resources" :: NullOrUndefined (HandshakeResources) } -> { "Id" :: NullOrUndefined (HandshakeId), "Arn" :: NullOrUndefined (HandshakeArn), "Parties" :: NullOrUndefined (HandshakeParties), "State" :: NullOrUndefined (HandshakeState), "RequestedTimestamp" :: NullOrUndefined (Timestamp), "ExpirationTimestamp" :: NullOrUndefined (Timestamp), "Action" :: NullOrUndefined (ActionType), "Resources" :: NullOrUndefined (HandshakeResources) }) -> Handshake
+newHandshake' :: ({ "Id" :: Maybe (HandshakeId), "Arn" :: Maybe (HandshakeArn), "Parties" :: Maybe (HandshakeParties), "State" :: Maybe (HandshakeState), "RequestedTimestamp" :: Maybe (Timestamp), "ExpirationTimestamp" :: Maybe (Timestamp), "Action" :: Maybe (ActionType), "Resources" :: Maybe (HandshakeResources) } -> { "Id" :: Maybe (HandshakeId), "Arn" :: Maybe (HandshakeArn), "Parties" :: Maybe (HandshakeParties), "State" :: Maybe (HandshakeState), "RequestedTimestamp" :: Maybe (Timestamp), "ExpirationTimestamp" :: Maybe (Timestamp), "Action" :: Maybe (ActionType), "Resources" :: Maybe (HandshakeResources) }) -> Handshake
 ```
 
 Constructs Handshake's fields from required parameters
@@ -2260,7 +2260,7 @@ Constructs Handshake's fields from required parameters
 
 ``` purescript
 newtype HandshakeAlreadyInStateException
-  = HandshakeAlreadyInStateException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = HandshakeAlreadyInStateException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>The specified handshake is already in the requested state. For example, you can't accept a handshake that was already accepted.</p>
@@ -2285,7 +2285,7 @@ Constructs HandshakeAlreadyInStateException from required parameters
 #### `newHandshakeAlreadyInStateException'`
 
 ``` purescript
-newHandshakeAlreadyInStateException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> HandshakeAlreadyInStateException
+newHandshakeAlreadyInStateException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> HandshakeAlreadyInStateException
 ```
 
 Constructs HandshakeAlreadyInStateException's fields from required parameters
@@ -2310,7 +2310,7 @@ Encode HandshakeArn
 
 ``` purescript
 newtype HandshakeConstraintViolationException
-  = HandshakeConstraintViolationException { "Message" :: NullOrUndefined (ExceptionMessage), "Reason" :: NullOrUndefined (HandshakeConstraintViolationExceptionReason) }
+  = HandshakeConstraintViolationException { "Message" :: Maybe (ExceptionMessage), "Reason" :: Maybe (HandshakeConstraintViolationExceptionReason) }
 ```
 
 <p>The requested operation would violate the constraint identified in the reason code.</p> <note> <p>Some of the reasons in the following list might not be applicable to this specific API or operation:</p> </note> <ul> <li> <p>ACCOUNT_NUMBER_LIMIT_EXCEEDED: You attempted to exceed the limit on the number of accounts in an organization. <b>Note</b>: deleted and closed accounts still count toward your limit.</p> <important> <p>If you get an exception that indicates that you exceeded your account limits for the organization or that you can"t add an account because your organization is still initializing, please contact <a href="https://console.aws.amazon.com/support/home#/"> AWS Customer Support</a>.</p> </important> </li> <li> <p>HANDSHAKE_RATE_LIMIT_EXCEEDED: You attempted to exceed the number of handshakes you can send in one day.</p> </li> <li> <p>ALREADY_IN_AN_ORGANIZATION: The handshake request is invalid because the invited account is already a member of an organization.</p> </li> <li> <p>ORGANIZATION_ALREADY_HAS_ALL_FEATURES: The handshake request is invalid because the organization has already enabled all features.</p> </li> <li> <p>INVITE_DISABLED_DURING_ENABLE_ALL_FEATURES: You cannot issue new invitations to join an organization while it is in the process of enabling all features. You can resume inviting accounts after you finalize the process when all accounts have agreed to the change.</p> </li> <li> <p>PAYMENT_INSTRUMENT_REQUIRED: You cannot complete the operation with an account that does not have a payment instrument, such as a credit card, associated with it.</p> </li> <li> <p>ORGANIZATION_FROM_DIFFERENT_SELLER_OF_RECORD: The request failed because the account is from a different marketplace than the accounts in the organization. For example, accounts with India addresses must be associated with the AISPL marketplace. All accounts in an organization must be from the same marketplace.</p> </li> <li> <p>ORGANIZATION_MEMBERSHIP_CHANGE_RATE_LIMIT_EXCEEDED: You attempted to change the membership of an account too quickly after its previous change.</p> </li> </ul>
@@ -2335,7 +2335,7 @@ Constructs HandshakeConstraintViolationException from required parameters
 #### `newHandshakeConstraintViolationException'`
 
 ``` purescript
-newHandshakeConstraintViolationException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage), "Reason" :: NullOrUndefined (HandshakeConstraintViolationExceptionReason) } -> { "Message" :: NullOrUndefined (ExceptionMessage), "Reason" :: NullOrUndefined (HandshakeConstraintViolationExceptionReason) }) -> HandshakeConstraintViolationException
+newHandshakeConstraintViolationException' :: ({ "Message" :: Maybe (ExceptionMessage), "Reason" :: Maybe (HandshakeConstraintViolationExceptionReason) } -> { "Message" :: Maybe (ExceptionMessage), "Reason" :: Maybe (HandshakeConstraintViolationExceptionReason) }) -> HandshakeConstraintViolationException
 ```
 
 Constructs HandshakeConstraintViolationException's fields from required parameters
@@ -2360,7 +2360,7 @@ Encode HandshakeConstraintViolationExceptionReason
 
 ``` purescript
 newtype HandshakeFilter
-  = HandshakeFilter { "ActionType" :: NullOrUndefined (ActionType), "ParentHandshakeId" :: NullOrUndefined (HandshakeId) }
+  = HandshakeFilter { "ActionType" :: Maybe (ActionType), "ParentHandshakeId" :: Maybe (HandshakeId) }
 ```
 
 <p>Specifies the criteria that are used to select the handshakes for the operation.</p>
@@ -2385,7 +2385,7 @@ Constructs HandshakeFilter from required parameters
 #### `newHandshakeFilter'`
 
 ``` purescript
-newHandshakeFilter' :: ({ "ActionType" :: NullOrUndefined (ActionType), "ParentHandshakeId" :: NullOrUndefined (HandshakeId) } -> { "ActionType" :: NullOrUndefined (ActionType), "ParentHandshakeId" :: NullOrUndefined (HandshakeId) }) -> HandshakeFilter
+newHandshakeFilter' :: ({ "ActionType" :: Maybe (ActionType), "ParentHandshakeId" :: Maybe (HandshakeId) } -> { "ActionType" :: Maybe (ActionType), "ParentHandshakeId" :: Maybe (HandshakeId) }) -> HandshakeFilter
 ```
 
 Constructs HandshakeFilter's fields from required parameters
@@ -2410,7 +2410,7 @@ Encode HandshakeId
 
 ``` purescript
 newtype HandshakeNotFoundException
-  = HandshakeNotFoundException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = HandshakeNotFoundException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>We can't find a handshake with the HandshakeId that you specified.</p>
@@ -2435,7 +2435,7 @@ Constructs HandshakeNotFoundException from required parameters
 #### `newHandshakeNotFoundException'`
 
 ``` purescript
-newHandshakeNotFoundException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> HandshakeNotFoundException
+newHandshakeNotFoundException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> HandshakeNotFoundException
 ```
 
 Constructs HandshakeNotFoundException's fields from required parameters
@@ -2542,7 +2542,7 @@ Encode HandshakePartyType
 
 ``` purescript
 newtype HandshakeResource
-  = HandshakeResource { "Value" :: NullOrUndefined (HandshakeResourceValue), "Type" :: NullOrUndefined (HandshakeResourceType) }
+  = HandshakeResource { "Value" :: Maybe (HandshakeResourceValue), "Type" :: Maybe (HandshakeResourceType) }
 ```
 
 <p>Contains additional data that is needed to process a handshake.</p>
@@ -2567,7 +2567,7 @@ Constructs HandshakeResource from required parameters
 #### `newHandshakeResource'`
 
 ``` purescript
-newHandshakeResource' :: ({ "Value" :: NullOrUndefined (HandshakeResourceValue), "Type" :: NullOrUndefined (HandshakeResourceType) } -> { "Value" :: NullOrUndefined (HandshakeResourceValue), "Type" :: NullOrUndefined (HandshakeResourceType) }) -> HandshakeResource
+newHandshakeResource' :: ({ "Value" :: Maybe (HandshakeResourceValue), "Type" :: Maybe (HandshakeResourceType) } -> { "Value" :: Maybe (HandshakeResourceValue), "Type" :: Maybe (HandshakeResourceType) }) -> HandshakeResource
 ```
 
 Constructs HandshakeResource's fields from required parameters
@@ -2672,7 +2672,7 @@ Encode IAMUserAccessToBilling
 
 ``` purescript
 newtype InvalidHandshakeTransitionException
-  = InvalidHandshakeTransitionException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = InvalidHandshakeTransitionException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>You can't perform the operation on the handshake in its current state. For example, you can't cancel a handshake that was already accepted, or accept a handshake that was already declined.</p>
@@ -2697,7 +2697,7 @@ Constructs InvalidHandshakeTransitionException from required parameters
 #### `newInvalidHandshakeTransitionException'`
 
 ``` purescript
-newInvalidHandshakeTransitionException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> InvalidHandshakeTransitionException
+newInvalidHandshakeTransitionException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> InvalidHandshakeTransitionException
 ```
 
 Constructs InvalidHandshakeTransitionException's fields from required parameters
@@ -2706,7 +2706,7 @@ Constructs InvalidHandshakeTransitionException's fields from required parameters
 
 ``` purescript
 newtype InvalidInputException
-  = InvalidInputException { "Message" :: NullOrUndefined (ExceptionMessage), "Reason" :: NullOrUndefined (InvalidInputExceptionReason) }
+  = InvalidInputException { "Message" :: Maybe (ExceptionMessage), "Reason" :: Maybe (InvalidInputExceptionReason) }
 ```
 
 <p>The requested operation failed because you provided invalid values for one or more of the request parameters. This exception includes a reason that contains additional information about the violated limit:</p> <note> <p>Some of the reasons in the following list might not be applicable to this specific API or operation:</p> </note> <ul> <li> <p>INVALID_PARTY_TYPE_TARGET: You specified the wrong type of entity (account, organization, or email) as a party.</p> </li> <li> <p>INVALID_SYNTAX_ORGANIZATION_ARN: You specified an invalid ARN for the organization.</p> </li> <li> <p>INVALID_SYNTAX_POLICY_ID: You specified an invalid policy ID. </p> </li> <li> <p>INVALID_ENUM: You specified a value that is not valid for that parameter.</p> </li> <li> <p>INVALID_FULL_NAME_TARGET: You specified a full name that contains invalid characters.</p> </li> <li> <p>INVALID_LIST_MEMBER: You provided a list to a parameter that contains at least one invalid value.</p> </li> <li> <p>MAX_LENGTH_EXCEEDED: You provided a string parameter that is longer than allowed.</p> </li> <li> <p>MAX_VALUE_EXCEEDED: You provided a numeric parameter that has a larger value than allowed.</p> </li> <li> <p>MIN_LENGTH_EXCEEDED: You provided a string parameter that is shorter than allowed.</p> </li> <li> <p>MIN_VALUE_EXCEEDED: You provided a numeric parameter that has a smaller value than allowed.</p> </li> <li> <p>IMMUTABLE_POLICY: You specified a policy that is managed by AWS and cannot be modified.</p> </li> <li> <p>INVALID_PATTERN: You provided a value that doesn't match the required pattern.</p> </li> <li> <p>INVALID_PATTERN_TARGET_ID: You specified a policy target ID that doesn't match the required pattern.</p> </li> <li> <p>INPUT_REQUIRED: You must include a value for all required parameters.</p> </li> <li> <p>INVALID_PAGINATION_TOKEN: Get the value for the NextToken parameter from the response to a previous call of the operation.</p> </li> <li> <p>MAX_FILTER_LIMIT_EXCEEDED: You can specify only one filter parameter for the operation.</p> </li> <li> <p>MOVING_ACCOUNT_BETWEEN_DIFFERENT_ROOTS: You can move an account only between entities in the same root.</p> </li> </ul>
@@ -2731,7 +2731,7 @@ Constructs InvalidInputException from required parameters
 #### `newInvalidInputException'`
 
 ``` purescript
-newInvalidInputException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage), "Reason" :: NullOrUndefined (InvalidInputExceptionReason) } -> { "Message" :: NullOrUndefined (ExceptionMessage), "Reason" :: NullOrUndefined (InvalidInputExceptionReason) }) -> InvalidInputException
+newInvalidInputException' :: ({ "Message" :: Maybe (ExceptionMessage), "Reason" :: Maybe (InvalidInputExceptionReason) } -> { "Message" :: Maybe (ExceptionMessage), "Reason" :: Maybe (InvalidInputExceptionReason) }) -> InvalidInputException
 ```
 
 Constructs InvalidInputException's fields from required parameters
@@ -2756,7 +2756,7 @@ Encode InvalidInputExceptionReason
 
 ``` purescript
 newtype InviteAccountToOrganizationRequest
-  = InviteAccountToOrganizationRequest { "Target" :: HandshakeParty, "Notes" :: NullOrUndefined (HandshakeNotes) }
+  = InviteAccountToOrganizationRequest { "Target" :: HandshakeParty, "Notes" :: Maybe (HandshakeNotes) }
 ```
 
 ##### Instances
@@ -2779,7 +2779,7 @@ Constructs InviteAccountToOrganizationRequest from required parameters
 #### `newInviteAccountToOrganizationRequest'`
 
 ``` purescript
-newInviteAccountToOrganizationRequest' :: HandshakeParty -> ({ "Target" :: HandshakeParty, "Notes" :: NullOrUndefined (HandshakeNotes) } -> { "Target" :: HandshakeParty, "Notes" :: NullOrUndefined (HandshakeNotes) }) -> InviteAccountToOrganizationRequest
+newInviteAccountToOrganizationRequest' :: HandshakeParty -> ({ "Target" :: HandshakeParty, "Notes" :: Maybe (HandshakeNotes) } -> { "Target" :: HandshakeParty, "Notes" :: Maybe (HandshakeNotes) }) -> InviteAccountToOrganizationRequest
 ```
 
 Constructs InviteAccountToOrganizationRequest's fields from required parameters
@@ -2788,7 +2788,7 @@ Constructs InviteAccountToOrganizationRequest's fields from required parameters
 
 ``` purescript
 newtype InviteAccountToOrganizationResponse
-  = InviteAccountToOrganizationResponse { "Handshake" :: NullOrUndefined (Handshake) }
+  = InviteAccountToOrganizationResponse { "Handshake" :: Maybe (Handshake) }
 ```
 
 ##### Instances
@@ -2811,7 +2811,7 @@ Constructs InviteAccountToOrganizationResponse from required parameters
 #### `newInviteAccountToOrganizationResponse'`
 
 ``` purescript
-newInviteAccountToOrganizationResponse' :: ({ "Handshake" :: NullOrUndefined (Handshake) } -> { "Handshake" :: NullOrUndefined (Handshake) }) -> InviteAccountToOrganizationResponse
+newInviteAccountToOrganizationResponse' :: ({ "Handshake" :: Maybe (Handshake) } -> { "Handshake" :: Maybe (Handshake) }) -> InviteAccountToOrganizationResponse
 ```
 
 Constructs InviteAccountToOrganizationResponse's fields from required parameters
@@ -2820,7 +2820,7 @@ Constructs InviteAccountToOrganizationResponse's fields from required parameters
 
 ``` purescript
 newtype ListAWSServiceAccessForOrganizationRequest
-  = ListAWSServiceAccessForOrganizationRequest { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListAWSServiceAccessForOrganizationRequest { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -2843,7 +2843,7 @@ Constructs ListAWSServiceAccessForOrganizationRequest from required parameters
 #### `newListAWSServiceAccessForOrganizationRequest'`
 
 ``` purescript
-newListAWSServiceAccessForOrganizationRequest' :: ({ "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListAWSServiceAccessForOrganizationRequest
+newListAWSServiceAccessForOrganizationRequest' :: ({ "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListAWSServiceAccessForOrganizationRequest
 ```
 
 Constructs ListAWSServiceAccessForOrganizationRequest's fields from required parameters
@@ -2852,7 +2852,7 @@ Constructs ListAWSServiceAccessForOrganizationRequest's fields from required par
 
 ``` purescript
 newtype ListAWSServiceAccessForOrganizationResponse
-  = ListAWSServiceAccessForOrganizationResponse { "EnabledServicePrincipals" :: NullOrUndefined (EnabledServicePrincipals), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListAWSServiceAccessForOrganizationResponse { "EnabledServicePrincipals" :: Maybe (EnabledServicePrincipals), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -2875,7 +2875,7 @@ Constructs ListAWSServiceAccessForOrganizationResponse from required parameters
 #### `newListAWSServiceAccessForOrganizationResponse'`
 
 ``` purescript
-newListAWSServiceAccessForOrganizationResponse' :: ({ "EnabledServicePrincipals" :: NullOrUndefined (EnabledServicePrincipals), "NextToken" :: NullOrUndefined (NextToken) } -> { "EnabledServicePrincipals" :: NullOrUndefined (EnabledServicePrincipals), "NextToken" :: NullOrUndefined (NextToken) }) -> ListAWSServiceAccessForOrganizationResponse
+newListAWSServiceAccessForOrganizationResponse' :: ({ "EnabledServicePrincipals" :: Maybe (EnabledServicePrincipals), "NextToken" :: Maybe (NextToken) } -> { "EnabledServicePrincipals" :: Maybe (EnabledServicePrincipals), "NextToken" :: Maybe (NextToken) }) -> ListAWSServiceAccessForOrganizationResponse
 ```
 
 Constructs ListAWSServiceAccessForOrganizationResponse's fields from required parameters
@@ -2884,7 +2884,7 @@ Constructs ListAWSServiceAccessForOrganizationResponse's fields from required pa
 
 ``` purescript
 newtype ListAccountsForParentRequest
-  = ListAccountsForParentRequest { "ParentId" :: ParentId, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListAccountsForParentRequest { "ParentId" :: ParentId, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -2907,7 +2907,7 @@ Constructs ListAccountsForParentRequest from required parameters
 #### `newListAccountsForParentRequest'`
 
 ``` purescript
-newListAccountsForParentRequest' :: ParentId -> ({ "ParentId" :: ParentId, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "ParentId" :: ParentId, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListAccountsForParentRequest
+newListAccountsForParentRequest' :: ParentId -> ({ "ParentId" :: ParentId, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "ParentId" :: ParentId, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListAccountsForParentRequest
 ```
 
 Constructs ListAccountsForParentRequest's fields from required parameters
@@ -2916,7 +2916,7 @@ Constructs ListAccountsForParentRequest's fields from required parameters
 
 ``` purescript
 newtype ListAccountsForParentResponse
-  = ListAccountsForParentResponse { "Accounts" :: NullOrUndefined (Accounts), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListAccountsForParentResponse { "Accounts" :: Maybe (Accounts), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -2939,7 +2939,7 @@ Constructs ListAccountsForParentResponse from required parameters
 #### `newListAccountsForParentResponse'`
 
 ``` purescript
-newListAccountsForParentResponse' :: ({ "Accounts" :: NullOrUndefined (Accounts), "NextToken" :: NullOrUndefined (NextToken) } -> { "Accounts" :: NullOrUndefined (Accounts), "NextToken" :: NullOrUndefined (NextToken) }) -> ListAccountsForParentResponse
+newListAccountsForParentResponse' :: ({ "Accounts" :: Maybe (Accounts), "NextToken" :: Maybe (NextToken) } -> { "Accounts" :: Maybe (Accounts), "NextToken" :: Maybe (NextToken) }) -> ListAccountsForParentResponse
 ```
 
 Constructs ListAccountsForParentResponse's fields from required parameters
@@ -2948,7 +2948,7 @@ Constructs ListAccountsForParentResponse's fields from required parameters
 
 ``` purescript
 newtype ListAccountsRequest
-  = ListAccountsRequest { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListAccountsRequest { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -2971,7 +2971,7 @@ Constructs ListAccountsRequest from required parameters
 #### `newListAccountsRequest'`
 
 ``` purescript
-newListAccountsRequest' :: ({ "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListAccountsRequest
+newListAccountsRequest' :: ({ "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListAccountsRequest
 ```
 
 Constructs ListAccountsRequest's fields from required parameters
@@ -2980,7 +2980,7 @@ Constructs ListAccountsRequest's fields from required parameters
 
 ``` purescript
 newtype ListAccountsResponse
-  = ListAccountsResponse { "Accounts" :: NullOrUndefined (Accounts), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListAccountsResponse { "Accounts" :: Maybe (Accounts), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -3003,7 +3003,7 @@ Constructs ListAccountsResponse from required parameters
 #### `newListAccountsResponse'`
 
 ``` purescript
-newListAccountsResponse' :: ({ "Accounts" :: NullOrUndefined (Accounts), "NextToken" :: NullOrUndefined (NextToken) } -> { "Accounts" :: NullOrUndefined (Accounts), "NextToken" :: NullOrUndefined (NextToken) }) -> ListAccountsResponse
+newListAccountsResponse' :: ({ "Accounts" :: Maybe (Accounts), "NextToken" :: Maybe (NextToken) } -> { "Accounts" :: Maybe (Accounts), "NextToken" :: Maybe (NextToken) }) -> ListAccountsResponse
 ```
 
 Constructs ListAccountsResponse's fields from required parameters
@@ -3012,7 +3012,7 @@ Constructs ListAccountsResponse's fields from required parameters
 
 ``` purescript
 newtype ListChildrenRequest
-  = ListChildrenRequest { "ParentId" :: ParentId, "ChildType" :: ChildType, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListChildrenRequest { "ParentId" :: ParentId, "ChildType" :: ChildType, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -3035,7 +3035,7 @@ Constructs ListChildrenRequest from required parameters
 #### `newListChildrenRequest'`
 
 ``` purescript
-newListChildrenRequest' :: ChildType -> ParentId -> ({ "ParentId" :: ParentId, "ChildType" :: ChildType, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "ParentId" :: ParentId, "ChildType" :: ChildType, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListChildrenRequest
+newListChildrenRequest' :: ChildType -> ParentId -> ({ "ParentId" :: ParentId, "ChildType" :: ChildType, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "ParentId" :: ParentId, "ChildType" :: ChildType, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListChildrenRequest
 ```
 
 Constructs ListChildrenRequest's fields from required parameters
@@ -3044,7 +3044,7 @@ Constructs ListChildrenRequest's fields from required parameters
 
 ``` purescript
 newtype ListChildrenResponse
-  = ListChildrenResponse { "Children" :: NullOrUndefined (Children), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListChildrenResponse { "Children" :: Maybe (Children), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -3067,7 +3067,7 @@ Constructs ListChildrenResponse from required parameters
 #### `newListChildrenResponse'`
 
 ``` purescript
-newListChildrenResponse' :: ({ "Children" :: NullOrUndefined (Children), "NextToken" :: NullOrUndefined (NextToken) } -> { "Children" :: NullOrUndefined (Children), "NextToken" :: NullOrUndefined (NextToken) }) -> ListChildrenResponse
+newListChildrenResponse' :: ({ "Children" :: Maybe (Children), "NextToken" :: Maybe (NextToken) } -> { "Children" :: Maybe (Children), "NextToken" :: Maybe (NextToken) }) -> ListChildrenResponse
 ```
 
 Constructs ListChildrenResponse's fields from required parameters
@@ -3076,7 +3076,7 @@ Constructs ListChildrenResponse's fields from required parameters
 
 ``` purescript
 newtype ListCreateAccountStatusRequest
-  = ListCreateAccountStatusRequest { "States" :: NullOrUndefined (CreateAccountStates), "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListCreateAccountStatusRequest { "States" :: Maybe (CreateAccountStates), "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -3099,7 +3099,7 @@ Constructs ListCreateAccountStatusRequest from required parameters
 #### `newListCreateAccountStatusRequest'`
 
 ``` purescript
-newListCreateAccountStatusRequest' :: ({ "States" :: NullOrUndefined (CreateAccountStates), "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "States" :: NullOrUndefined (CreateAccountStates), "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListCreateAccountStatusRequest
+newListCreateAccountStatusRequest' :: ({ "States" :: Maybe (CreateAccountStates), "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "States" :: Maybe (CreateAccountStates), "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListCreateAccountStatusRequest
 ```
 
 Constructs ListCreateAccountStatusRequest's fields from required parameters
@@ -3108,7 +3108,7 @@ Constructs ListCreateAccountStatusRequest's fields from required parameters
 
 ``` purescript
 newtype ListCreateAccountStatusResponse
-  = ListCreateAccountStatusResponse { "CreateAccountStatuses" :: NullOrUndefined (CreateAccountStatuses), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListCreateAccountStatusResponse { "CreateAccountStatuses" :: Maybe (CreateAccountStatuses), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -3131,7 +3131,7 @@ Constructs ListCreateAccountStatusResponse from required parameters
 #### `newListCreateAccountStatusResponse'`
 
 ``` purescript
-newListCreateAccountStatusResponse' :: ({ "CreateAccountStatuses" :: NullOrUndefined (CreateAccountStatuses), "NextToken" :: NullOrUndefined (NextToken) } -> { "CreateAccountStatuses" :: NullOrUndefined (CreateAccountStatuses), "NextToken" :: NullOrUndefined (NextToken) }) -> ListCreateAccountStatusResponse
+newListCreateAccountStatusResponse' :: ({ "CreateAccountStatuses" :: Maybe (CreateAccountStatuses), "NextToken" :: Maybe (NextToken) } -> { "CreateAccountStatuses" :: Maybe (CreateAccountStatuses), "NextToken" :: Maybe (NextToken) }) -> ListCreateAccountStatusResponse
 ```
 
 Constructs ListCreateAccountStatusResponse's fields from required parameters
@@ -3140,7 +3140,7 @@ Constructs ListCreateAccountStatusResponse's fields from required parameters
 
 ``` purescript
 newtype ListHandshakesForAccountRequest
-  = ListHandshakesForAccountRequest { "Filter" :: NullOrUndefined (HandshakeFilter), "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListHandshakesForAccountRequest { "Filter" :: Maybe (HandshakeFilter), "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -3163,7 +3163,7 @@ Constructs ListHandshakesForAccountRequest from required parameters
 #### `newListHandshakesForAccountRequest'`
 
 ``` purescript
-newListHandshakesForAccountRequest' :: ({ "Filter" :: NullOrUndefined (HandshakeFilter), "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "Filter" :: NullOrUndefined (HandshakeFilter), "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListHandshakesForAccountRequest
+newListHandshakesForAccountRequest' :: ({ "Filter" :: Maybe (HandshakeFilter), "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "Filter" :: Maybe (HandshakeFilter), "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListHandshakesForAccountRequest
 ```
 
 Constructs ListHandshakesForAccountRequest's fields from required parameters
@@ -3172,7 +3172,7 @@ Constructs ListHandshakesForAccountRequest's fields from required parameters
 
 ``` purescript
 newtype ListHandshakesForAccountResponse
-  = ListHandshakesForAccountResponse { "Handshakes" :: NullOrUndefined (Handshakes), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListHandshakesForAccountResponse { "Handshakes" :: Maybe (Handshakes), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -3195,7 +3195,7 @@ Constructs ListHandshakesForAccountResponse from required parameters
 #### `newListHandshakesForAccountResponse'`
 
 ``` purescript
-newListHandshakesForAccountResponse' :: ({ "Handshakes" :: NullOrUndefined (Handshakes), "NextToken" :: NullOrUndefined (NextToken) } -> { "Handshakes" :: NullOrUndefined (Handshakes), "NextToken" :: NullOrUndefined (NextToken) }) -> ListHandshakesForAccountResponse
+newListHandshakesForAccountResponse' :: ({ "Handshakes" :: Maybe (Handshakes), "NextToken" :: Maybe (NextToken) } -> { "Handshakes" :: Maybe (Handshakes), "NextToken" :: Maybe (NextToken) }) -> ListHandshakesForAccountResponse
 ```
 
 Constructs ListHandshakesForAccountResponse's fields from required parameters
@@ -3204,7 +3204,7 @@ Constructs ListHandshakesForAccountResponse's fields from required parameters
 
 ``` purescript
 newtype ListHandshakesForOrganizationRequest
-  = ListHandshakesForOrganizationRequest { "Filter" :: NullOrUndefined (HandshakeFilter), "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListHandshakesForOrganizationRequest { "Filter" :: Maybe (HandshakeFilter), "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -3227,7 +3227,7 @@ Constructs ListHandshakesForOrganizationRequest from required parameters
 #### `newListHandshakesForOrganizationRequest'`
 
 ``` purescript
-newListHandshakesForOrganizationRequest' :: ({ "Filter" :: NullOrUndefined (HandshakeFilter), "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "Filter" :: NullOrUndefined (HandshakeFilter), "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListHandshakesForOrganizationRequest
+newListHandshakesForOrganizationRequest' :: ({ "Filter" :: Maybe (HandshakeFilter), "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "Filter" :: Maybe (HandshakeFilter), "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListHandshakesForOrganizationRequest
 ```
 
 Constructs ListHandshakesForOrganizationRequest's fields from required parameters
@@ -3236,7 +3236,7 @@ Constructs ListHandshakesForOrganizationRequest's fields from required parameter
 
 ``` purescript
 newtype ListHandshakesForOrganizationResponse
-  = ListHandshakesForOrganizationResponse { "Handshakes" :: NullOrUndefined (Handshakes), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListHandshakesForOrganizationResponse { "Handshakes" :: Maybe (Handshakes), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -3259,7 +3259,7 @@ Constructs ListHandshakesForOrganizationResponse from required parameters
 #### `newListHandshakesForOrganizationResponse'`
 
 ``` purescript
-newListHandshakesForOrganizationResponse' :: ({ "Handshakes" :: NullOrUndefined (Handshakes), "NextToken" :: NullOrUndefined (NextToken) } -> { "Handshakes" :: NullOrUndefined (Handshakes), "NextToken" :: NullOrUndefined (NextToken) }) -> ListHandshakesForOrganizationResponse
+newListHandshakesForOrganizationResponse' :: ({ "Handshakes" :: Maybe (Handshakes), "NextToken" :: Maybe (NextToken) } -> { "Handshakes" :: Maybe (Handshakes), "NextToken" :: Maybe (NextToken) }) -> ListHandshakesForOrganizationResponse
 ```
 
 Constructs ListHandshakesForOrganizationResponse's fields from required parameters
@@ -3268,7 +3268,7 @@ Constructs ListHandshakesForOrganizationResponse's fields from required paramete
 
 ``` purescript
 newtype ListOrganizationalUnitsForParentRequest
-  = ListOrganizationalUnitsForParentRequest { "ParentId" :: ParentId, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListOrganizationalUnitsForParentRequest { "ParentId" :: ParentId, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -3291,7 +3291,7 @@ Constructs ListOrganizationalUnitsForParentRequest from required parameters
 #### `newListOrganizationalUnitsForParentRequest'`
 
 ``` purescript
-newListOrganizationalUnitsForParentRequest' :: ParentId -> ({ "ParentId" :: ParentId, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "ParentId" :: ParentId, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListOrganizationalUnitsForParentRequest
+newListOrganizationalUnitsForParentRequest' :: ParentId -> ({ "ParentId" :: ParentId, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "ParentId" :: ParentId, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListOrganizationalUnitsForParentRequest
 ```
 
 Constructs ListOrganizationalUnitsForParentRequest's fields from required parameters
@@ -3300,7 +3300,7 @@ Constructs ListOrganizationalUnitsForParentRequest's fields from required parame
 
 ``` purescript
 newtype ListOrganizationalUnitsForParentResponse
-  = ListOrganizationalUnitsForParentResponse { "OrganizationalUnits" :: NullOrUndefined (OrganizationalUnits), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListOrganizationalUnitsForParentResponse { "OrganizationalUnits" :: Maybe (OrganizationalUnits), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -3323,7 +3323,7 @@ Constructs ListOrganizationalUnitsForParentResponse from required parameters
 #### `newListOrganizationalUnitsForParentResponse'`
 
 ``` purescript
-newListOrganizationalUnitsForParentResponse' :: ({ "OrganizationalUnits" :: NullOrUndefined (OrganizationalUnits), "NextToken" :: NullOrUndefined (NextToken) } -> { "OrganizationalUnits" :: NullOrUndefined (OrganizationalUnits), "NextToken" :: NullOrUndefined (NextToken) }) -> ListOrganizationalUnitsForParentResponse
+newListOrganizationalUnitsForParentResponse' :: ({ "OrganizationalUnits" :: Maybe (OrganizationalUnits), "NextToken" :: Maybe (NextToken) } -> { "OrganizationalUnits" :: Maybe (OrganizationalUnits), "NextToken" :: Maybe (NextToken) }) -> ListOrganizationalUnitsForParentResponse
 ```
 
 Constructs ListOrganizationalUnitsForParentResponse's fields from required parameters
@@ -3332,7 +3332,7 @@ Constructs ListOrganizationalUnitsForParentResponse's fields from required param
 
 ``` purescript
 newtype ListParentsRequest
-  = ListParentsRequest { "ChildId" :: ChildId, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListParentsRequest { "ChildId" :: ChildId, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -3355,7 +3355,7 @@ Constructs ListParentsRequest from required parameters
 #### `newListParentsRequest'`
 
 ``` purescript
-newListParentsRequest' :: ChildId -> ({ "ChildId" :: ChildId, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "ChildId" :: ChildId, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListParentsRequest
+newListParentsRequest' :: ChildId -> ({ "ChildId" :: ChildId, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "ChildId" :: ChildId, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListParentsRequest
 ```
 
 Constructs ListParentsRequest's fields from required parameters
@@ -3364,7 +3364,7 @@ Constructs ListParentsRequest's fields from required parameters
 
 ``` purescript
 newtype ListParentsResponse
-  = ListParentsResponse { "Parents" :: NullOrUndefined (Parents), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListParentsResponse { "Parents" :: Maybe (Parents), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -3387,7 +3387,7 @@ Constructs ListParentsResponse from required parameters
 #### `newListParentsResponse'`
 
 ``` purescript
-newListParentsResponse' :: ({ "Parents" :: NullOrUndefined (Parents), "NextToken" :: NullOrUndefined (NextToken) } -> { "Parents" :: NullOrUndefined (Parents), "NextToken" :: NullOrUndefined (NextToken) }) -> ListParentsResponse
+newListParentsResponse' :: ({ "Parents" :: Maybe (Parents), "NextToken" :: Maybe (NextToken) } -> { "Parents" :: Maybe (Parents), "NextToken" :: Maybe (NextToken) }) -> ListParentsResponse
 ```
 
 Constructs ListParentsResponse's fields from required parameters
@@ -3396,7 +3396,7 @@ Constructs ListParentsResponse's fields from required parameters
 
 ``` purescript
 newtype ListPoliciesForTargetRequest
-  = ListPoliciesForTargetRequest { "TargetId" :: PolicyTargetId, "Filter" :: PolicyType, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListPoliciesForTargetRequest { "TargetId" :: PolicyTargetId, "Filter" :: PolicyType, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -3419,7 +3419,7 @@ Constructs ListPoliciesForTargetRequest from required parameters
 #### `newListPoliciesForTargetRequest'`
 
 ``` purescript
-newListPoliciesForTargetRequest' :: PolicyType -> PolicyTargetId -> ({ "TargetId" :: PolicyTargetId, "Filter" :: PolicyType, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "TargetId" :: PolicyTargetId, "Filter" :: PolicyType, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListPoliciesForTargetRequest
+newListPoliciesForTargetRequest' :: PolicyType -> PolicyTargetId -> ({ "TargetId" :: PolicyTargetId, "Filter" :: PolicyType, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "TargetId" :: PolicyTargetId, "Filter" :: PolicyType, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListPoliciesForTargetRequest
 ```
 
 Constructs ListPoliciesForTargetRequest's fields from required parameters
@@ -3428,7 +3428,7 @@ Constructs ListPoliciesForTargetRequest's fields from required parameters
 
 ``` purescript
 newtype ListPoliciesForTargetResponse
-  = ListPoliciesForTargetResponse { "Policies" :: NullOrUndefined (Policies), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListPoliciesForTargetResponse { "Policies" :: Maybe (Policies), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -3451,7 +3451,7 @@ Constructs ListPoliciesForTargetResponse from required parameters
 #### `newListPoliciesForTargetResponse'`
 
 ``` purescript
-newListPoliciesForTargetResponse' :: ({ "Policies" :: NullOrUndefined (Policies), "NextToken" :: NullOrUndefined (NextToken) } -> { "Policies" :: NullOrUndefined (Policies), "NextToken" :: NullOrUndefined (NextToken) }) -> ListPoliciesForTargetResponse
+newListPoliciesForTargetResponse' :: ({ "Policies" :: Maybe (Policies), "NextToken" :: Maybe (NextToken) } -> { "Policies" :: Maybe (Policies), "NextToken" :: Maybe (NextToken) }) -> ListPoliciesForTargetResponse
 ```
 
 Constructs ListPoliciesForTargetResponse's fields from required parameters
@@ -3460,7 +3460,7 @@ Constructs ListPoliciesForTargetResponse's fields from required parameters
 
 ``` purescript
 newtype ListPoliciesRequest
-  = ListPoliciesRequest { "Filter" :: PolicyType, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListPoliciesRequest { "Filter" :: PolicyType, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -3483,7 +3483,7 @@ Constructs ListPoliciesRequest from required parameters
 #### `newListPoliciesRequest'`
 
 ``` purescript
-newListPoliciesRequest' :: PolicyType -> ({ "Filter" :: PolicyType, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "Filter" :: PolicyType, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListPoliciesRequest
+newListPoliciesRequest' :: PolicyType -> ({ "Filter" :: PolicyType, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "Filter" :: PolicyType, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListPoliciesRequest
 ```
 
 Constructs ListPoliciesRequest's fields from required parameters
@@ -3492,7 +3492,7 @@ Constructs ListPoliciesRequest's fields from required parameters
 
 ``` purescript
 newtype ListPoliciesResponse
-  = ListPoliciesResponse { "Policies" :: NullOrUndefined (Policies), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListPoliciesResponse { "Policies" :: Maybe (Policies), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -3515,7 +3515,7 @@ Constructs ListPoliciesResponse from required parameters
 #### `newListPoliciesResponse'`
 
 ``` purescript
-newListPoliciesResponse' :: ({ "Policies" :: NullOrUndefined (Policies), "NextToken" :: NullOrUndefined (NextToken) } -> { "Policies" :: NullOrUndefined (Policies), "NextToken" :: NullOrUndefined (NextToken) }) -> ListPoliciesResponse
+newListPoliciesResponse' :: ({ "Policies" :: Maybe (Policies), "NextToken" :: Maybe (NextToken) } -> { "Policies" :: Maybe (Policies), "NextToken" :: Maybe (NextToken) }) -> ListPoliciesResponse
 ```
 
 Constructs ListPoliciesResponse's fields from required parameters
@@ -3524,7 +3524,7 @@ Constructs ListPoliciesResponse's fields from required parameters
 
 ``` purescript
 newtype ListRootsRequest
-  = ListRootsRequest { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListRootsRequest { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -3547,7 +3547,7 @@ Constructs ListRootsRequest from required parameters
 #### `newListRootsRequest'`
 
 ``` purescript
-newListRootsRequest' :: ({ "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListRootsRequest
+newListRootsRequest' :: ({ "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListRootsRequest
 ```
 
 Constructs ListRootsRequest's fields from required parameters
@@ -3556,7 +3556,7 @@ Constructs ListRootsRequest's fields from required parameters
 
 ``` purescript
 newtype ListRootsResponse
-  = ListRootsResponse { "Roots" :: NullOrUndefined (Roots), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListRootsResponse { "Roots" :: Maybe (Roots), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -3579,7 +3579,7 @@ Constructs ListRootsResponse from required parameters
 #### `newListRootsResponse'`
 
 ``` purescript
-newListRootsResponse' :: ({ "Roots" :: NullOrUndefined (Roots), "NextToken" :: NullOrUndefined (NextToken) } -> { "Roots" :: NullOrUndefined (Roots), "NextToken" :: NullOrUndefined (NextToken) }) -> ListRootsResponse
+newListRootsResponse' :: ({ "Roots" :: Maybe (Roots), "NextToken" :: Maybe (NextToken) } -> { "Roots" :: Maybe (Roots), "NextToken" :: Maybe (NextToken) }) -> ListRootsResponse
 ```
 
 Constructs ListRootsResponse's fields from required parameters
@@ -3588,7 +3588,7 @@ Constructs ListRootsResponse's fields from required parameters
 
 ``` purescript
 newtype ListTargetsForPolicyRequest
-  = ListTargetsForPolicyRequest { "PolicyId" :: PolicyId, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListTargetsForPolicyRequest { "PolicyId" :: PolicyId, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -3611,7 +3611,7 @@ Constructs ListTargetsForPolicyRequest from required parameters
 #### `newListTargetsForPolicyRequest'`
 
 ``` purescript
-newListTargetsForPolicyRequest' :: PolicyId -> ({ "PolicyId" :: PolicyId, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "PolicyId" :: PolicyId, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListTargetsForPolicyRequest
+newListTargetsForPolicyRequest' :: PolicyId -> ({ "PolicyId" :: PolicyId, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "PolicyId" :: PolicyId, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListTargetsForPolicyRequest
 ```
 
 Constructs ListTargetsForPolicyRequest's fields from required parameters
@@ -3620,7 +3620,7 @@ Constructs ListTargetsForPolicyRequest's fields from required parameters
 
 ``` purescript
 newtype ListTargetsForPolicyResponse
-  = ListTargetsForPolicyResponse { "Targets" :: NullOrUndefined (PolicyTargets), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListTargetsForPolicyResponse { "Targets" :: Maybe (PolicyTargets), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -3643,7 +3643,7 @@ Constructs ListTargetsForPolicyResponse from required parameters
 #### `newListTargetsForPolicyResponse'`
 
 ``` purescript
-newListTargetsForPolicyResponse' :: ({ "Targets" :: NullOrUndefined (PolicyTargets), "NextToken" :: NullOrUndefined (NextToken) } -> { "Targets" :: NullOrUndefined (PolicyTargets), "NextToken" :: NullOrUndefined (NextToken) }) -> ListTargetsForPolicyResponse
+newListTargetsForPolicyResponse' :: ({ "Targets" :: Maybe (PolicyTargets), "NextToken" :: Maybe (NextToken) } -> { "Targets" :: Maybe (PolicyTargets), "NextToken" :: Maybe (NextToken) }) -> ListTargetsForPolicyResponse
 ```
 
 Constructs ListTargetsForPolicyResponse's fields from required parameters
@@ -3652,7 +3652,7 @@ Constructs ListTargetsForPolicyResponse's fields from required parameters
 
 ``` purescript
 newtype MalformedPolicyDocumentException
-  = MalformedPolicyDocumentException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = MalformedPolicyDocumentException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>The provided policy document does not meet the requirements of the specified policy type. For example, the syntax might be incorrect. For details about service control policy syntax, see <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_scp-syntax.html">Service Control Policy Syntax</a> in the <i>AWS Organizations User Guide</i>.</p>
@@ -3677,7 +3677,7 @@ Constructs MalformedPolicyDocumentException from required parameters
 #### `newMalformedPolicyDocumentException'`
 
 ``` purescript
-newMalformedPolicyDocumentException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> MalformedPolicyDocumentException
+newMalformedPolicyDocumentException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> MalformedPolicyDocumentException
 ```
 
 Constructs MalformedPolicyDocumentException's fields from required parameters
@@ -3686,7 +3686,7 @@ Constructs MalformedPolicyDocumentException's fields from required parameters
 
 ``` purescript
 newtype MasterCannotLeaveOrganizationException
-  = MasterCannotLeaveOrganizationException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = MasterCannotLeaveOrganizationException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>You can't remove a master account from an organization. If you want the master account to become a member account in another organization, you must first delete the current organization of the master account.</p>
@@ -3711,7 +3711,7 @@ Constructs MasterCannotLeaveOrganizationException from required parameters
 #### `newMasterCannotLeaveOrganizationException'`
 
 ``` purescript
-newMasterCannotLeaveOrganizationException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> MasterCannotLeaveOrganizationException
+newMasterCannotLeaveOrganizationException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> MasterCannotLeaveOrganizationException
 ```
 
 Constructs MasterCannotLeaveOrganizationException's fields from required parameters
@@ -3784,7 +3784,7 @@ Encode NextToken
 
 ``` purescript
 newtype Organization
-  = Organization { "Id" :: NullOrUndefined (OrganizationId), "Arn" :: NullOrUndefined (OrganizationArn), "FeatureSet" :: NullOrUndefined (OrganizationFeatureSet), "MasterAccountArn" :: NullOrUndefined (AccountArn), "MasterAccountId" :: NullOrUndefined (AccountId), "MasterAccountEmail" :: NullOrUndefined (Email), "AvailablePolicyTypes" :: NullOrUndefined (PolicyTypes) }
+  = Organization { "Id" :: Maybe (OrganizationId), "Arn" :: Maybe (OrganizationArn), "FeatureSet" :: Maybe (OrganizationFeatureSet), "MasterAccountArn" :: Maybe (AccountArn), "MasterAccountId" :: Maybe (AccountId), "MasterAccountEmail" :: Maybe (Email), "AvailablePolicyTypes" :: Maybe (PolicyTypes) }
 ```
 
 <p>Contains details about an organization. An organization is a collection of accounts that are centrally managed together using consolidated billing, organized hierarchically with organizational units (OUs), and controlled with policies .</p>
@@ -3809,7 +3809,7 @@ Constructs Organization from required parameters
 #### `newOrganization'`
 
 ``` purescript
-newOrganization' :: ({ "Id" :: NullOrUndefined (OrganizationId), "Arn" :: NullOrUndefined (OrganizationArn), "FeatureSet" :: NullOrUndefined (OrganizationFeatureSet), "MasterAccountArn" :: NullOrUndefined (AccountArn), "MasterAccountId" :: NullOrUndefined (AccountId), "MasterAccountEmail" :: NullOrUndefined (Email), "AvailablePolicyTypes" :: NullOrUndefined (PolicyTypes) } -> { "Id" :: NullOrUndefined (OrganizationId), "Arn" :: NullOrUndefined (OrganizationArn), "FeatureSet" :: NullOrUndefined (OrganizationFeatureSet), "MasterAccountArn" :: NullOrUndefined (AccountArn), "MasterAccountId" :: NullOrUndefined (AccountId), "MasterAccountEmail" :: NullOrUndefined (Email), "AvailablePolicyTypes" :: NullOrUndefined (PolicyTypes) }) -> Organization
+newOrganization' :: ({ "Id" :: Maybe (OrganizationId), "Arn" :: Maybe (OrganizationArn), "FeatureSet" :: Maybe (OrganizationFeatureSet), "MasterAccountArn" :: Maybe (AccountArn), "MasterAccountId" :: Maybe (AccountId), "MasterAccountEmail" :: Maybe (Email), "AvailablePolicyTypes" :: Maybe (PolicyTypes) } -> { "Id" :: Maybe (OrganizationId), "Arn" :: Maybe (OrganizationArn), "FeatureSet" :: Maybe (OrganizationFeatureSet), "MasterAccountArn" :: Maybe (AccountArn), "MasterAccountId" :: Maybe (AccountId), "MasterAccountEmail" :: Maybe (Email), "AvailablePolicyTypes" :: Maybe (PolicyTypes) }) -> Organization
 ```
 
 Constructs Organization's fields from required parameters
@@ -3866,7 +3866,7 @@ Encode OrganizationId
 
 ``` purescript
 newtype OrganizationNotEmptyException
-  = OrganizationNotEmptyException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = OrganizationNotEmptyException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>The organization isn't empty. To delete an organization, you must first remove all accounts except the master account, delete all organizational units (OUs), and delete all policies.</p>
@@ -3891,7 +3891,7 @@ Constructs OrganizationNotEmptyException from required parameters
 #### `newOrganizationNotEmptyException'`
 
 ``` purescript
-newOrganizationNotEmptyException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> OrganizationNotEmptyException
+newOrganizationNotEmptyException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> OrganizationNotEmptyException
 ```
 
 Constructs OrganizationNotEmptyException's fields from required parameters
@@ -3900,7 +3900,7 @@ Constructs OrganizationNotEmptyException's fields from required parameters
 
 ``` purescript
 newtype OrganizationalUnit
-  = OrganizationalUnit { "Id" :: NullOrUndefined (OrganizationalUnitId), "Arn" :: NullOrUndefined (OrganizationalUnitArn), "Name" :: NullOrUndefined (OrganizationalUnitName) }
+  = OrganizationalUnit { "Id" :: Maybe (OrganizationalUnitId), "Arn" :: Maybe (OrganizationalUnitArn), "Name" :: Maybe (OrganizationalUnitName) }
 ```
 
 <p>Contains details about an organizational unit (OU). An OU is a container of AWS accounts within a root of an organization. Policies that are attached to an OU apply to all accounts contained in that OU and in any child OUs.</p>
@@ -3925,7 +3925,7 @@ Constructs OrganizationalUnit from required parameters
 #### `newOrganizationalUnit'`
 
 ``` purescript
-newOrganizationalUnit' :: ({ "Id" :: NullOrUndefined (OrganizationalUnitId), "Arn" :: NullOrUndefined (OrganizationalUnitArn), "Name" :: NullOrUndefined (OrganizationalUnitName) } -> { "Id" :: NullOrUndefined (OrganizationalUnitId), "Arn" :: NullOrUndefined (OrganizationalUnitArn), "Name" :: NullOrUndefined (OrganizationalUnitName) }) -> OrganizationalUnit
+newOrganizationalUnit' :: ({ "Id" :: Maybe (OrganizationalUnitId), "Arn" :: Maybe (OrganizationalUnitArn), "Name" :: Maybe (OrganizationalUnitName) } -> { "Id" :: Maybe (OrganizationalUnitId), "Arn" :: Maybe (OrganizationalUnitArn), "Name" :: Maybe (OrganizationalUnitName) }) -> OrganizationalUnit
 ```
 
 Constructs OrganizationalUnit's fields from required parameters
@@ -3982,7 +3982,7 @@ Encode OrganizationalUnitName
 
 ``` purescript
 newtype OrganizationalUnitNotEmptyException
-  = OrganizationalUnitNotEmptyException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = OrganizationalUnitNotEmptyException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>The specified organizational unit (OU) is not empty. Move all accounts to another root or to other OUs, remove all child OUs, and then try the operation again.</p>
@@ -4007,7 +4007,7 @@ Constructs OrganizationalUnitNotEmptyException from required parameters
 #### `newOrganizationalUnitNotEmptyException'`
 
 ``` purescript
-newOrganizationalUnitNotEmptyException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> OrganizationalUnitNotEmptyException
+newOrganizationalUnitNotEmptyException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> OrganizationalUnitNotEmptyException
 ```
 
 Constructs OrganizationalUnitNotEmptyException's fields from required parameters
@@ -4016,7 +4016,7 @@ Constructs OrganizationalUnitNotEmptyException's fields from required parameters
 
 ``` purescript
 newtype OrganizationalUnitNotFoundException
-  = OrganizationalUnitNotFoundException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = OrganizationalUnitNotFoundException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>We can't find an organizational unit (OU) with the OrganizationalUnitId that you specified.</p>
@@ -4041,7 +4041,7 @@ Constructs OrganizationalUnitNotFoundException from required parameters
 #### `newOrganizationalUnitNotFoundException'`
 
 ``` purescript
-newOrganizationalUnitNotFoundException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> OrganizationalUnitNotFoundException
+newOrganizationalUnitNotFoundException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> OrganizationalUnitNotFoundException
 ```
 
 Constructs OrganizationalUnitNotFoundException's fields from required parameters
@@ -4066,7 +4066,7 @@ Encode OrganizationalUnits
 
 ``` purescript
 newtype Parent
-  = Parent { "Id" :: NullOrUndefined (ParentId), "Type" :: NullOrUndefined (ParentType) }
+  = Parent { "Id" :: Maybe (ParentId), "Type" :: Maybe (ParentType) }
 ```
 
 <p>Contains information about either a root or an organizational unit (OU) that can contain OUs or accounts in an organization.</p>
@@ -4091,7 +4091,7 @@ Constructs Parent from required parameters
 #### `newParent'`
 
 ``` purescript
-newParent' :: ({ "Id" :: NullOrUndefined (ParentId), "Type" :: NullOrUndefined (ParentType) } -> { "Id" :: NullOrUndefined (ParentId), "Type" :: NullOrUndefined (ParentType) }) -> Parent
+newParent' :: ({ "Id" :: Maybe (ParentId), "Type" :: Maybe (ParentType) } -> { "Id" :: Maybe (ParentId), "Type" :: Maybe (ParentType) }) -> Parent
 ```
 
 Constructs Parent's fields from required parameters
@@ -4116,7 +4116,7 @@ Encode ParentId
 
 ``` purescript
 newtype ParentNotFoundException
-  = ParentNotFoundException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = ParentNotFoundException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>We can't find a root or organizational unit (OU) with the ParentId that you specified.</p>
@@ -4141,7 +4141,7 @@ Constructs ParentNotFoundException from required parameters
 #### `newParentNotFoundException'`
 
 ``` purescript
-newParentNotFoundException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> ParentNotFoundException
+newParentNotFoundException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> ParentNotFoundException
 ```
 
 Constructs ParentNotFoundException's fields from required parameters
@@ -4198,7 +4198,7 @@ Encode Policies
 
 ``` purescript
 newtype Policy
-  = Policy { "PolicySummary" :: NullOrUndefined (PolicySummary), "Content" :: NullOrUndefined (PolicyContent) }
+  = Policy { "PolicySummary" :: Maybe (PolicySummary), "Content" :: Maybe (PolicyContent) }
 ```
 
 <p>Contains rules to be applied to the affected accounts. Policies can be attached directly to accounts, or to roots and OUs to affect all accounts in those hierarchies.</p>
@@ -4223,7 +4223,7 @@ Constructs Policy from required parameters
 #### `newPolicy'`
 
 ``` purescript
-newPolicy' :: ({ "PolicySummary" :: NullOrUndefined (PolicySummary), "Content" :: NullOrUndefined (PolicyContent) } -> { "PolicySummary" :: NullOrUndefined (PolicySummary), "Content" :: NullOrUndefined (PolicyContent) }) -> Policy
+newPolicy' :: ({ "PolicySummary" :: Maybe (PolicySummary), "Content" :: Maybe (PolicyContent) } -> { "PolicySummary" :: Maybe (PolicySummary), "Content" :: Maybe (PolicyContent) }) -> Policy
 ```
 
 Constructs Policy's fields from required parameters
@@ -4296,7 +4296,7 @@ Encode PolicyId
 
 ``` purescript
 newtype PolicyInUseException
-  = PolicyInUseException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = PolicyInUseException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>The policy is attached to one or more entities. You must detach it from all roots, organizational units (OUs), and accounts before performing this operation.</p>
@@ -4321,7 +4321,7 @@ Constructs PolicyInUseException from required parameters
 #### `newPolicyInUseException'`
 
 ``` purescript
-newPolicyInUseException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> PolicyInUseException
+newPolicyInUseException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> PolicyInUseException
 ```
 
 Constructs PolicyInUseException's fields from required parameters
@@ -4346,7 +4346,7 @@ Encode PolicyName
 
 ``` purescript
 newtype PolicyNotAttachedException
-  = PolicyNotAttachedException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = PolicyNotAttachedException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>The policy isn't attached to the specified target in the specified root.</p>
@@ -4371,7 +4371,7 @@ Constructs PolicyNotAttachedException from required parameters
 #### `newPolicyNotAttachedException'`
 
 ``` purescript
-newPolicyNotAttachedException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> PolicyNotAttachedException
+newPolicyNotAttachedException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> PolicyNotAttachedException
 ```
 
 Constructs PolicyNotAttachedException's fields from required parameters
@@ -4380,7 +4380,7 @@ Constructs PolicyNotAttachedException's fields from required parameters
 
 ``` purescript
 newtype PolicyNotFoundException
-  = PolicyNotFoundException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = PolicyNotFoundException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>We can't find a policy with the PolicyId that you specified.</p>
@@ -4405,7 +4405,7 @@ Constructs PolicyNotFoundException from required parameters
 #### `newPolicyNotFoundException'`
 
 ``` purescript
-newPolicyNotFoundException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> PolicyNotFoundException
+newPolicyNotFoundException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> PolicyNotFoundException
 ```
 
 Constructs PolicyNotFoundException's fields from required parameters
@@ -4414,7 +4414,7 @@ Constructs PolicyNotFoundException's fields from required parameters
 
 ``` purescript
 newtype PolicySummary
-  = PolicySummary { "Id" :: NullOrUndefined (PolicyId), "Arn" :: NullOrUndefined (PolicyArn), "Name" :: NullOrUndefined (PolicyName), "Description" :: NullOrUndefined (PolicyDescription), "Type" :: NullOrUndefined (PolicyType), "AwsManaged" :: NullOrUndefined (AwsManagedPolicy) }
+  = PolicySummary { "Id" :: Maybe (PolicyId), "Arn" :: Maybe (PolicyArn), "Name" :: Maybe (PolicyName), "Description" :: Maybe (PolicyDescription), "Type" :: Maybe (PolicyType), "AwsManaged" :: Maybe (AwsManagedPolicy) }
 ```
 
 <p>Contains information about a policy, but does not include the content. To see the content of a policy, see <a>DescribePolicy</a>.</p>
@@ -4439,7 +4439,7 @@ Constructs PolicySummary from required parameters
 #### `newPolicySummary'`
 
 ``` purescript
-newPolicySummary' :: ({ "Id" :: NullOrUndefined (PolicyId), "Arn" :: NullOrUndefined (PolicyArn), "Name" :: NullOrUndefined (PolicyName), "Description" :: NullOrUndefined (PolicyDescription), "Type" :: NullOrUndefined (PolicyType), "AwsManaged" :: NullOrUndefined (AwsManagedPolicy) } -> { "Id" :: NullOrUndefined (PolicyId), "Arn" :: NullOrUndefined (PolicyArn), "Name" :: NullOrUndefined (PolicyName), "Description" :: NullOrUndefined (PolicyDescription), "Type" :: NullOrUndefined (PolicyType), "AwsManaged" :: NullOrUndefined (AwsManagedPolicy) }) -> PolicySummary
+newPolicySummary' :: ({ "Id" :: Maybe (PolicyId), "Arn" :: Maybe (PolicyArn), "Name" :: Maybe (PolicyName), "Description" :: Maybe (PolicyDescription), "Type" :: Maybe (PolicyType), "AwsManaged" :: Maybe (AwsManagedPolicy) } -> { "Id" :: Maybe (PolicyId), "Arn" :: Maybe (PolicyArn), "Name" :: Maybe (PolicyName), "Description" :: Maybe (PolicyDescription), "Type" :: Maybe (PolicyType), "AwsManaged" :: Maybe (AwsManagedPolicy) }) -> PolicySummary
 ```
 
 Constructs PolicySummary's fields from required parameters
@@ -4464,7 +4464,7 @@ Encode PolicyTargetId
 
 ``` purescript
 newtype PolicyTargetSummary
-  = PolicyTargetSummary { "TargetId" :: NullOrUndefined (PolicyTargetId), "Arn" :: NullOrUndefined (GenericArn), "Name" :: NullOrUndefined (TargetName), "Type" :: NullOrUndefined (TargetType) }
+  = PolicyTargetSummary { "TargetId" :: Maybe (PolicyTargetId), "Arn" :: Maybe (GenericArn), "Name" :: Maybe (TargetName), "Type" :: Maybe (TargetType) }
 ```
 
 <p>Contains information about a root, OU, or account that a policy is attached to.</p>
@@ -4489,7 +4489,7 @@ Constructs PolicyTargetSummary from required parameters
 #### `newPolicyTargetSummary'`
 
 ``` purescript
-newPolicyTargetSummary' :: ({ "TargetId" :: NullOrUndefined (PolicyTargetId), "Arn" :: NullOrUndefined (GenericArn), "Name" :: NullOrUndefined (TargetName), "Type" :: NullOrUndefined (TargetType) } -> { "TargetId" :: NullOrUndefined (PolicyTargetId), "Arn" :: NullOrUndefined (GenericArn), "Name" :: NullOrUndefined (TargetName), "Type" :: NullOrUndefined (TargetType) }) -> PolicyTargetSummary
+newPolicyTargetSummary' :: ({ "TargetId" :: Maybe (PolicyTargetId), "Arn" :: Maybe (GenericArn), "Name" :: Maybe (TargetName), "Type" :: Maybe (TargetType) } -> { "TargetId" :: Maybe (PolicyTargetId), "Arn" :: Maybe (GenericArn), "Name" :: Maybe (TargetName), "Type" :: Maybe (TargetType) }) -> PolicyTargetSummary
 ```
 
 Constructs PolicyTargetSummary's fields from required parameters
@@ -4530,7 +4530,7 @@ Encode PolicyType
 
 ``` purescript
 newtype PolicyTypeAlreadyEnabledException
-  = PolicyTypeAlreadyEnabledException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = PolicyTypeAlreadyEnabledException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>The specified policy type is already enabled in the specified root.</p>
@@ -4555,7 +4555,7 @@ Constructs PolicyTypeAlreadyEnabledException from required parameters
 #### `newPolicyTypeAlreadyEnabledException'`
 
 ``` purescript
-newPolicyTypeAlreadyEnabledException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> PolicyTypeAlreadyEnabledException
+newPolicyTypeAlreadyEnabledException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> PolicyTypeAlreadyEnabledException
 ```
 
 Constructs PolicyTypeAlreadyEnabledException's fields from required parameters
@@ -4564,7 +4564,7 @@ Constructs PolicyTypeAlreadyEnabledException's fields from required parameters
 
 ``` purescript
 newtype PolicyTypeNotAvailableForOrganizationException
-  = PolicyTypeNotAvailableForOrganizationException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = PolicyTypeNotAvailableForOrganizationException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>You can't use the specified policy type with the feature set currently enabled for this organization. For example, you can enable service control policies (SCPs) only after you enable all features in the organization. For more information, see <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies.html#enable_policies_on_root">Enabling and Disabling a Policy Type on a Root</a> in the <i>AWS Organizations User Guide</i>.</p>
@@ -4589,7 +4589,7 @@ Constructs PolicyTypeNotAvailableForOrganizationException from required paramete
 #### `newPolicyTypeNotAvailableForOrganizationException'`
 
 ``` purescript
-newPolicyTypeNotAvailableForOrganizationException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> PolicyTypeNotAvailableForOrganizationException
+newPolicyTypeNotAvailableForOrganizationException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> PolicyTypeNotAvailableForOrganizationException
 ```
 
 Constructs PolicyTypeNotAvailableForOrganizationException's fields from required parameters
@@ -4598,7 +4598,7 @@ Constructs PolicyTypeNotAvailableForOrganizationException's fields from required
 
 ``` purescript
 newtype PolicyTypeNotEnabledException
-  = PolicyTypeNotEnabledException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = PolicyTypeNotEnabledException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>The specified policy type is not currently enabled in this root. You cannot attach policies of the specified type to entities in a root until you enable that type in the root. For more information, see <a href="http://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_support-all-features.html">Enabling All Features in Your Organization</a> in the <i>AWS Organizations User Guide</i>.</p>
@@ -4623,7 +4623,7 @@ Constructs PolicyTypeNotEnabledException from required parameters
 #### `newPolicyTypeNotEnabledException'`
 
 ``` purescript
-newPolicyTypeNotEnabledException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> PolicyTypeNotEnabledException
+newPolicyTypeNotEnabledException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> PolicyTypeNotEnabledException
 ```
 
 Constructs PolicyTypeNotEnabledException's fields from required parameters
@@ -4648,7 +4648,7 @@ Encode PolicyTypeStatus
 
 ``` purescript
 newtype PolicyTypeSummary
-  = PolicyTypeSummary { "Type" :: NullOrUndefined (PolicyType), "Status" :: NullOrUndefined (PolicyTypeStatus) }
+  = PolicyTypeSummary { "Type" :: Maybe (PolicyType), "Status" :: Maybe (PolicyTypeStatus) }
 ```
 
 <p>Contains information about a policy type and its status in the associated root.</p>
@@ -4673,7 +4673,7 @@ Constructs PolicyTypeSummary from required parameters
 #### `newPolicyTypeSummary'`
 
 ``` purescript
-newPolicyTypeSummary' :: ({ "Type" :: NullOrUndefined (PolicyType), "Status" :: NullOrUndefined (PolicyTypeStatus) } -> { "Type" :: NullOrUndefined (PolicyType), "Status" :: NullOrUndefined (PolicyTypeStatus) }) -> PolicyTypeSummary
+newPolicyTypeSummary' :: ({ "Type" :: Maybe (PolicyType), "Status" :: Maybe (PolicyTypeStatus) } -> { "Type" :: Maybe (PolicyType), "Status" :: Maybe (PolicyTypeStatus) }) -> PolicyTypeSummary
 ```
 
 Constructs PolicyTypeSummary's fields from required parameters
@@ -4746,7 +4746,7 @@ Encode RoleName
 
 ``` purescript
 newtype Root
-  = Root { "Id" :: NullOrUndefined (RootId), "Arn" :: NullOrUndefined (RootArn), "Name" :: NullOrUndefined (RootName), "PolicyTypes" :: NullOrUndefined (PolicyTypes) }
+  = Root { "Id" :: Maybe (RootId), "Arn" :: Maybe (RootArn), "Name" :: Maybe (RootName), "PolicyTypes" :: Maybe (PolicyTypes) }
 ```
 
 <p>Contains details about a root. A root is a top-level parent node in the hierarchy of an organization that can contain organizational units (OUs) and accounts. Every root contains every AWS account in the organization. Each root enables the accounts to be organized in a different way and to have different policy types enabled for use in that root.</p>
@@ -4771,7 +4771,7 @@ Constructs Root from required parameters
 #### `newRoot'`
 
 ``` purescript
-newRoot' :: ({ "Id" :: NullOrUndefined (RootId), "Arn" :: NullOrUndefined (RootArn), "Name" :: NullOrUndefined (RootName), "PolicyTypes" :: NullOrUndefined (PolicyTypes) } -> { "Id" :: NullOrUndefined (RootId), "Arn" :: NullOrUndefined (RootArn), "Name" :: NullOrUndefined (RootName), "PolicyTypes" :: NullOrUndefined (PolicyTypes) }) -> Root
+newRoot' :: ({ "Id" :: Maybe (RootId), "Arn" :: Maybe (RootArn), "Name" :: Maybe (RootName), "PolicyTypes" :: Maybe (PolicyTypes) } -> { "Id" :: Maybe (RootId), "Arn" :: Maybe (RootArn), "Name" :: Maybe (RootName), "PolicyTypes" :: Maybe (PolicyTypes) }) -> Root
 ```
 
 Constructs Root's fields from required parameters
@@ -4828,7 +4828,7 @@ Encode RootName
 
 ``` purescript
 newtype RootNotFoundException
-  = RootNotFoundException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = RootNotFoundException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>We can't find a root with the RootId that you specified.</p>
@@ -4853,7 +4853,7 @@ Constructs RootNotFoundException from required parameters
 #### `newRootNotFoundException'`
 
 ``` purescript
-newRootNotFoundException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> RootNotFoundException
+newRootNotFoundException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> RootNotFoundException
 ```
 
 Constructs RootNotFoundException's fields from required parameters
@@ -4878,7 +4878,7 @@ Encode Roots
 
 ``` purescript
 newtype ServiceException
-  = ServiceException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = ServiceException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>AWS Organizations can't complete your request because of an internal service error. Try again later.</p>
@@ -4903,7 +4903,7 @@ Constructs ServiceException from required parameters
 #### `newServiceException'`
 
 ``` purescript
-newServiceException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> ServiceException
+newServiceException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> ServiceException
 ```
 
 Constructs ServiceException's fields from required parameters
@@ -4928,7 +4928,7 @@ Encode ServicePrincipal
 
 ``` purescript
 newtype SourceParentNotFoundException
-  = SourceParentNotFoundException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = SourceParentNotFoundException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>We can't find a source root or OU with the ParentId that you specified.</p>
@@ -4953,7 +4953,7 @@ Constructs SourceParentNotFoundException from required parameters
 #### `newSourceParentNotFoundException'`
 
 ``` purescript
-newSourceParentNotFoundException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> SourceParentNotFoundException
+newSourceParentNotFoundException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> SourceParentNotFoundException
 ```
 
 Constructs SourceParentNotFoundException's fields from required parameters
@@ -4978,7 +4978,7 @@ Encode TargetName
 
 ``` purescript
 newtype TargetNotFoundException
-  = TargetNotFoundException { "Message" :: NullOrUndefined (ExceptionMessage) }
+  = TargetNotFoundException { "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>We can't find a root, OU, or account with the TargetId that you specified.</p>
@@ -5003,7 +5003,7 @@ Constructs TargetNotFoundException from required parameters
 #### `newTargetNotFoundException'`
 
 ``` purescript
-newTargetNotFoundException' :: ({ "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Message" :: NullOrUndefined (ExceptionMessage) }) -> TargetNotFoundException
+newTargetNotFoundException' :: ({ "Message" :: Maybe (ExceptionMessage) } -> { "Message" :: Maybe (ExceptionMessage) }) -> TargetNotFoundException
 ```
 
 Constructs TargetNotFoundException's fields from required parameters
@@ -5028,7 +5028,7 @@ Encode TargetType
 
 ``` purescript
 newtype TooManyRequestsException
-  = TooManyRequestsException { "Type" :: NullOrUndefined (ExceptionType), "Message" :: NullOrUndefined (ExceptionMessage) }
+  = TooManyRequestsException { "Type" :: Maybe (ExceptionType), "Message" :: Maybe (ExceptionMessage) }
 ```
 
 <p>You've sent too many requests in too short a period of time. The limit helps protect against denial-of-service attacks. Try again later.</p>
@@ -5053,7 +5053,7 @@ Constructs TooManyRequestsException from required parameters
 #### `newTooManyRequestsException'`
 
 ``` purescript
-newTooManyRequestsException' :: ({ "Type" :: NullOrUndefined (ExceptionType), "Message" :: NullOrUndefined (ExceptionMessage) } -> { "Type" :: NullOrUndefined (ExceptionType), "Message" :: NullOrUndefined (ExceptionMessage) }) -> TooManyRequestsException
+newTooManyRequestsException' :: ({ "Type" :: Maybe (ExceptionType), "Message" :: Maybe (ExceptionMessage) } -> { "Type" :: Maybe (ExceptionType), "Message" :: Maybe (ExceptionMessage) }) -> TooManyRequestsException
 ```
 
 Constructs TooManyRequestsException's fields from required parameters
@@ -5062,7 +5062,7 @@ Constructs TooManyRequestsException's fields from required parameters
 
 ``` purescript
 newtype UpdateOrganizationalUnitRequest
-  = UpdateOrganizationalUnitRequest { "OrganizationalUnitId" :: OrganizationalUnitId, "Name" :: NullOrUndefined (OrganizationalUnitName) }
+  = UpdateOrganizationalUnitRequest { "OrganizationalUnitId" :: OrganizationalUnitId, "Name" :: Maybe (OrganizationalUnitName) }
 ```
 
 ##### Instances
@@ -5085,7 +5085,7 @@ Constructs UpdateOrganizationalUnitRequest from required parameters
 #### `newUpdateOrganizationalUnitRequest'`
 
 ``` purescript
-newUpdateOrganizationalUnitRequest' :: OrganizationalUnitId -> ({ "OrganizationalUnitId" :: OrganizationalUnitId, "Name" :: NullOrUndefined (OrganizationalUnitName) } -> { "OrganizationalUnitId" :: OrganizationalUnitId, "Name" :: NullOrUndefined (OrganizationalUnitName) }) -> UpdateOrganizationalUnitRequest
+newUpdateOrganizationalUnitRequest' :: OrganizationalUnitId -> ({ "OrganizationalUnitId" :: OrganizationalUnitId, "Name" :: Maybe (OrganizationalUnitName) } -> { "OrganizationalUnitId" :: OrganizationalUnitId, "Name" :: Maybe (OrganizationalUnitName) }) -> UpdateOrganizationalUnitRequest
 ```
 
 Constructs UpdateOrganizationalUnitRequest's fields from required parameters
@@ -5094,7 +5094,7 @@ Constructs UpdateOrganizationalUnitRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateOrganizationalUnitResponse
-  = UpdateOrganizationalUnitResponse { "OrganizationalUnit" :: NullOrUndefined (OrganizationalUnit) }
+  = UpdateOrganizationalUnitResponse { "OrganizationalUnit" :: Maybe (OrganizationalUnit) }
 ```
 
 ##### Instances
@@ -5117,7 +5117,7 @@ Constructs UpdateOrganizationalUnitResponse from required parameters
 #### `newUpdateOrganizationalUnitResponse'`
 
 ``` purescript
-newUpdateOrganizationalUnitResponse' :: ({ "OrganizationalUnit" :: NullOrUndefined (OrganizationalUnit) } -> { "OrganizationalUnit" :: NullOrUndefined (OrganizationalUnit) }) -> UpdateOrganizationalUnitResponse
+newUpdateOrganizationalUnitResponse' :: ({ "OrganizationalUnit" :: Maybe (OrganizationalUnit) } -> { "OrganizationalUnit" :: Maybe (OrganizationalUnit) }) -> UpdateOrganizationalUnitResponse
 ```
 
 Constructs UpdateOrganizationalUnitResponse's fields from required parameters
@@ -5126,7 +5126,7 @@ Constructs UpdateOrganizationalUnitResponse's fields from required parameters
 
 ``` purescript
 newtype UpdatePolicyRequest
-  = UpdatePolicyRequest { "PolicyId" :: PolicyId, "Name" :: NullOrUndefined (PolicyName), "Description" :: NullOrUndefined (PolicyDescription), "Content" :: NullOrUndefined (PolicyContent) }
+  = UpdatePolicyRequest { "PolicyId" :: PolicyId, "Name" :: Maybe (PolicyName), "Description" :: Maybe (PolicyDescription), "Content" :: Maybe (PolicyContent) }
 ```
 
 ##### Instances
@@ -5149,7 +5149,7 @@ Constructs UpdatePolicyRequest from required parameters
 #### `newUpdatePolicyRequest'`
 
 ``` purescript
-newUpdatePolicyRequest' :: PolicyId -> ({ "PolicyId" :: PolicyId, "Name" :: NullOrUndefined (PolicyName), "Description" :: NullOrUndefined (PolicyDescription), "Content" :: NullOrUndefined (PolicyContent) } -> { "PolicyId" :: PolicyId, "Name" :: NullOrUndefined (PolicyName), "Description" :: NullOrUndefined (PolicyDescription), "Content" :: NullOrUndefined (PolicyContent) }) -> UpdatePolicyRequest
+newUpdatePolicyRequest' :: PolicyId -> ({ "PolicyId" :: PolicyId, "Name" :: Maybe (PolicyName), "Description" :: Maybe (PolicyDescription), "Content" :: Maybe (PolicyContent) } -> { "PolicyId" :: PolicyId, "Name" :: Maybe (PolicyName), "Description" :: Maybe (PolicyDescription), "Content" :: Maybe (PolicyContent) }) -> UpdatePolicyRequest
 ```
 
 Constructs UpdatePolicyRequest's fields from required parameters
@@ -5158,7 +5158,7 @@ Constructs UpdatePolicyRequest's fields from required parameters
 
 ``` purescript
 newtype UpdatePolicyResponse
-  = UpdatePolicyResponse { "Policy" :: NullOrUndefined (Policy) }
+  = UpdatePolicyResponse { "Policy" :: Maybe (Policy) }
 ```
 
 ##### Instances
@@ -5181,7 +5181,7 @@ Constructs UpdatePolicyResponse from required parameters
 #### `newUpdatePolicyResponse'`
 
 ``` purescript
-newUpdatePolicyResponse' :: ({ "Policy" :: NullOrUndefined (Policy) } -> { "Policy" :: NullOrUndefined (Policy) }) -> UpdatePolicyResponse
+newUpdatePolicyResponse' :: ({ "Policy" :: Maybe (Policy) } -> { "Policy" :: Maybe (Policy) }) -> UpdatePolicyResponse
 ```
 
 Constructs UpdatePolicyResponse's fields from required parameters
